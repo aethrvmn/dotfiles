@@ -23,7 +23,7 @@ fortune | cowsay
 
 # Function to clear the screen and show fortune and cowsay
 custom_clear() {
-    clear
+    command clear
     fortune | cowsay
 }
 
