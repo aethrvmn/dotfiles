@@ -4,7 +4,15 @@
 
 # Function to display a git icon next to the username
 parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/ (\1)/p'
+    local branch=$(git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/\1/p')
+    if [ -n "$branch" ]; then
+        local git_status=$(git status --porcelain 2> /dev/null)
+        if [ -z "$git_status" ]; then
+            echo " ($branch)"
+        else
+            echo " ($branch*)"
+        fi
+    fi
 }
 
 # Set the command prompt
@@ -29,7 +37,7 @@ shopt -s checkwinsize
 
 # Function to clear the screen and show fortune and cowsay
 custom_clear() {
-    clear
+    command clear
     fortune | cowsay
 }
 
