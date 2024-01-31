@@ -5,8 +5,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background: transparent;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -87,9 +86,11 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
+#mpd,
+#custom-power {
+    padding: 6px;
+    color: #e9f3f0;
+    font-size: 14px;
 }
 
 #window,
@@ -108,7 +109,9 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #4c4e65;
+    border-radius: 25px 25px;
+    padding: 15px;
 }
 
 #battery {
@@ -128,27 +131,24 @@ button:hover {
     }
 }
 
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
 
 label:focus {
     background-color: #000000;
 }
 
+#taskbar {
+    background-color: rgba(76, 78, 101, 0.7);
+    border-radius: 25px 25px;
+    padding: 10px;
+}
+
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: #23654b;
+    color: white;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: #23654b;
 }
 
 #disk {
@@ -160,13 +160,20 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: #23654b;
+    border-radius: 25px 0px 0px 25px;
+    padding-left: 10px;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
-}
+    background-color: #23654b;
+    border-radius: 25px 0px 0px 25px;
+    padding: 10px;
+    }
 
+#bluetooth {
+    background-color: #23654b;    
+}
 #pulseaudio {
     background-color: #f1c40f;
     color: #000000;
@@ -186,14 +193,21 @@ label:focus {
     background-color: #f53c3c;
 }
 
+#custom-power {
+    background-color: #4c4e65;
+}
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: #23654b;
+    color: #e9f3f0;
     min-width: 100px;
+    border-radius: 0px 25px 25px 0px;
+    padding: 10px;
+    
+        
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: #23654b;
 }
 
 #custom-media.custom-vlc {
@@ -201,7 +215,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: #23654b;
 }
 
 #temperature.critical {
@@ -209,7 +223,9 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: #23645b;
+    border-radius: 25px 0px 0px 25px;
+    padding: 15px;
 }
 
 #tray > .passive {

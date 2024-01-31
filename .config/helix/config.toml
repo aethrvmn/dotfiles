@@ -1,0 +1,21 @@
+theme = "sonokai"
+
+[editor]
+line-number = 'relative'
+
+[editor.statusline]
+left = ["mode", "spinner", "separator"]
+center = ["file-name","read-only-indicator","file-modification-indicator", "total-line-numbers"]
+right = ["separator", "diagnostics", "selections", "register", "position", "file-encoding"]
+
+[editor.file-picker]
+hidden = true
+
+[editor.auto-pairs]
+'('=')'
+'{'='}'
+'['=']'
+'"'='"'
+'`'='`'
+'<'='>'
+"'"="'"

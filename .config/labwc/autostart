@@ -1,12 +1,8 @@
 # Set background image.
 swww init &
 
-swww img ~/Pictures/bg/k.webp &
-
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
-
-
 kanshi >/dev/null 2>&1 &
 
 # Launch a panel such as yambar or waybar.
@@ -19,3 +15,8 @@ mako >/dev/null 2>&1 &
 
 # Start the Thunar daemon for better startup
 thunar --daemon &
+
+swww img -o DP-3 ~/Wallpapers/hobbits.jpg &
+swww img -o DP-2 ~/Wallpapers/bluemana.png &
+
+# Define custom programs to start

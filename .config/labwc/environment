@@ -16,7 +16,7 @@
 ## For further details, see xkeyboard-config(7)
 ##
 
-XKB_DEFAULT_LAYOUT=it,gr
+XKB_DEFAULT_LAYOUT=us,gr
 XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
 # XKB_DEFAULT_OPTIONS=grp:shift_caps_toggle
 
@@ -31,9 +31,6 @@ MOZ_ENABLE_WAYLAND=1
 ## `find /usr/share/icons/ -type d -name "cursors"`
 ##
 
-# XCURSOR_THEME=breeze_cursors
-# XCURSOR_THEME=capitaine-cursors
-# XCURSOR_SIZE=24
 
 ##
 ## Disable hardware cursors. Most users would not want to do this, but if you
@@ -64,3 +61,5 @@ MOZ_ENABLE_WAYLAND=1
 
 # XDG_CURRENT_DESKTOP=wlroots
 
+XCURSOR_THEME=Adwaita
+XCURSOR_SIZE=24

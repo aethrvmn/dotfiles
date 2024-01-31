@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Check the current Wi-Fi state
+state=$(nmcli radio wifi)
+
+# Toggle Wi-Fi state
+if [ "$state" == "enabled" ]; then
+    nmcli radio wifi off
+else
+    nmcli radio wifi on
+fi
