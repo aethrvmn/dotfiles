@@ -1,10 +1,9 @@
 [{
-    "layer": "top", // Waybar at top layer
+    "layer": "bottom", // Waybar at top layer
     "output": "DP-3", // Display at output
     "position": "top", // Waybar position (top|bottom|left|right)
-
-    "height": 34, // Waybar height (to be removed for auto height)
-    
+    "exclusive": false,
+    "reload_style_on_change": true,
     "spacing": 0, // Gaps between modules (4px)
     
     // Choose the order of the modules
@@ -28,8 +27,20 @@
     },
 
     "clock": {
+        "format": "{:%R, %B %d}",
         "timezone": "Europe/Rome",
-        "tooltip-format": "<big>{:%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+      		"format": {
+      			"months":     "<span color='#ffead3'><b>{}</b></span>",
+      			"days":       "<span color='#ecc6d9'><b>{}</b></span>",
+      			"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+      			"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+      			"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+      		}
+        },
         "on-click": "thunderbird"
     },
 
@@ -73,7 +84,7 @@
 
     "custom/power": {
         "format":"  ",
-        "on-click": "wlogout -b 2",
+        "on-click": "wlogout --protocol layer-shell -b 2",
         "tooltip": "Shutdown menu"
     },
 },
@@ -82,9 +93,8 @@
     "layer": "bottom", // Waybar at top layer
     "output": "DP-3", // Display at output
     "position": "bottom", // Waybar position (top|bottom|left|right)
-
-    "height": 54, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "reload_style_on_change": true,
+     "spacing": 4, // Gaps between modules (4px)
     
     // Choose the order of the modules
 

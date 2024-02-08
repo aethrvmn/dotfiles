@@ -155,7 +155,7 @@
       <action name="Execute" command="firefox --private-window"/>
     </keybind>
     <keybind key="W-space">
-      <action name="Execute" command="j4-dmenu-desktop --dmenu='bemenu-run -xbi'"/>
+      <action name="Execute" command="j4-dmenu-desktop --dmenu='bemenu'"/>
     </keybind>
     <keybind key="W-s">
       <action name="Execute" command="spotify"/>

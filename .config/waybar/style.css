@@ -143,12 +143,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: #23654b;
+    background-color: #0E3D17;
     color: white;
 }
 
 #memory {
-    background-color: #23654b;
+    background-color: #0E3D17;
 }
 
 #disk {
@@ -160,19 +160,19 @@ label:focus {
 }
 
 #network {
-    background-color: #23654b;
+    background-color: #0E3D17;
     border-radius: 25px 0px 0px 25px;
     padding-left: 10px;
 }
 
 #network.disconnected {
-    background-color: #23654b;
+    background-color: #0E3D17;
     border-radius: 25px 0px 0px 25px;
     padding: 10px;
     }
 
 #bluetooth {
-    background-color: #23654b;    
+    background-color: #0E3D17;    
 }
 #pulseaudio {
     background-color: #f1c40f;
@@ -197,7 +197,7 @@ label:focus {
     background-color: #4c4e65;
 }
 #custom-media {
-    background-color: #23654b;
+    background-color: #0E3D17;
     color: #e9f3f0;
     min-width: 100px;
     border-radius: 0px 25px 25px 0px;
@@ -207,7 +207,7 @@ label:focus {
 }
 
 #custom-media.custom-spotify {
-    background-color: #23654b;
+    background-color: #0E3D17;
 }
 
 #custom-media.custom-vlc {
@@ -215,7 +215,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #23654b;
+    background-color: #0E3D17;
 }
 
 #temperature.critical {
@@ -223,7 +223,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #23645b;
+    background-color: #0E3D17;
     border-radius: 25px 0px 0px 25px;
     padding: 15px;
 }

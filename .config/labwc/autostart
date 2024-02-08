@@ -20,3 +20,4 @@ swww img -o DP-3 ~/Wallpapers/hobbits.jpg &
 swww img -o DP-2 ~/Wallpapers/bluemana.png &
 
 # Define custom programs to start
+1password &
