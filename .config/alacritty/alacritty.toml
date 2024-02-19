@@ -1,3 +1,8 @@
+live_config_reload = true
+
 [window]
 opacity = 0.97
 blur = true
+
+[font]
+size = 13

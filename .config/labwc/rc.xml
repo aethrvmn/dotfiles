@@ -61,6 +61,7 @@
     <range>1</range>
     <topMaximize>yes</topMaximize>
   </snapping>
+
   <!-- Workspaces can be configured like this: -->
   <desktops>
     <popupTime>1000</popupTime>
@@ -171,15 +172,30 @@
     </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop" to="1"/>
+      <action name="Execute"
+        command="bash -c 'echo 1 > /tmp/workspace'" />
     </keybind>
     <keybind key="W-2">
       <action name="GoToDesktop" to="2"/>
+      <action name="Execute" command = "bash -c 'echo 2 > /tmp/workspace'" />
     </keybind>
     <keybind key="W-3">
       <action name="GoToDesktop" to="3"/>
+      <action name="Execute" command = "bash -c 'echo 3 > /tmp/workspace'" />
     </keybind>
     <keybind key="W-4">
       <action name="GoToDesktop" to="4"/>
+      <action name="Execute" command = "bash -c 'echo 4 > /tmp/workspace'" />
+    </keybind>
+    <keybind key="W-C-Left">
+      <action name="GoToDesktop" to="left" />
+      <action name="Execute"
+        command="bash -c 'echo left > /tmp/workspace'" />
+    </keybind>
+    <keybind key="W-C-Right">
+      <action name="GoToDesktop" to="right" />
+      <action name="Execute"
+        command="bash -c 'echo right > /tmp/workspace'" />
     </keybind>
     <keybind key="W-a">
       <action name="ToggleMaximize"/>
@@ -386,10 +402,12 @@
         <action name="ShowMenu" menu="root-menu"/>
       </mousebind>
       <mousebind direction="Up" action="Scroll">
-        <action name="GoToDesktop" to="left" wrap="yes"/>
+        <action name="GoToDesktop" to="right" wrap="yes"/>
+        <action name="Execute" command="bash -c 'echo right > /tmp/workspace'" />
       </mousebind>
       <mousebind direction="Down" action="Scroll">
-        <action name="GoToDesktop" to="right" wrap="yes"/>
+        <action name="GoToDesktop" to="left" wrap="yes"/>
+        <action name="Execute" command="bash -c 'echo left > /tmp/workspace'" />
       </mousebind>
     </context>
   </mouse>

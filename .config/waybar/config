@@ -1,33 +1,32 @@
-[{
+{
     "layer": "bottom", // Waybar at top layer
     "output": "DP-3", // Display at output
     "position": "top", // Waybar position (top|bottom|left|right)
-    "exclusive": false,
     "reload_style_on_change": true,
-    "spacing": 0, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)i
+    "exclusive": true,
     
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces"],
+    "modules-left": ["custom/media", "pulseaudio", "custom/workspaces"],
     
-    "modules-center": ["clock"],
+    "modules-center": ["wlr/taskbar"],
     
-    "modules-right": ["network", "bluetooth", "cpu", "memory", "temperature", "custom/power"],
+    "modules-right": ["network", "bluetooth", "cpu", "memory", "temperature", "tray", "clock", "custom/power"],
 
     
     // Modules configuration
     
     "bluetooth": {
 	"format": "  ",
-    "format-disabled": "",
 	"format-off": " ! ",
 	"format-connected": "  ",
 	"format-connected-battery": "{device_alias} {device_battery_percentage}%  ",
-    "on-click": "~/.config/waybar/toggle_bluetooth.sh",
+    "on-click": "~/.config/waybar/scripts/toggle_bluetooth.sh",
     "on-click-right": "alacritty -e bluetoothctl"
     },
 
     "clock": {
-        "format": "{:%R, %B %d}",
+        "format": "{:%R, %b %d}",
         "timezone": "Europe/Rome",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
@@ -53,6 +52,24 @@
         "format": "{}%  "
     },
 
+    "pulseaudio": {
+      	"format": "{volume}% {icon}",
+      	"format-bluetooth": "{volume}% {icon}",
+      	"format-muted": "",
+      	"format-icons": {
+      		"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      		"headphones": "",
+      		"handsfree": "",
+      		"headset": "",
+      		"phone": "",
+      		"portable": "",
+      		"car": "",
+      		"default": ["", ""]
+      	},
+      	"scroll-step": 1,
+      	"on-click": "pavucontrol"
+    },
+
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
@@ -63,8 +80,8 @@
     "format": "{name}:AAA {icon}",
    	"format-icons": {
   		"1": "  ",
-  		"2": "  ",
-  		"3": "  ",
+  		"2": "  ",
+  		"3": "  ",
   		"4": "  ",
   		"active": "  ",
   		"default": "  "
@@ -72,38 +89,9 @@
   	"sort-by-number": true
     },
 
-
-    "network": {
-        "format-wifi": " ",
-        "format-ethernet": "{ipaddr}/{cidr}  ",
-        "format-disconnected": " ⚠ ",
-        "on-click": "./toggle_wifi.sh"
-    },
-
-// Custom modules
-
-    "custom/power": {
-        "format":"  ",
-        "on-click": "wlogout --protocol layer-shell -b 2",
-        "tooltip": "Shutdown menu"
-    },
-},
-{
-
-    "layer": "bottom", // Waybar at top layer
-    "output": "DP-3", // Display at output
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "reload_style_on_change": true,
-     "spacing": 4, // Gaps between modules (4px)
-    
-    // Choose the order of the modules
-
-    "modules-left":["custom/media"],
-    "modules-center": ["wlr/taskbar"],
-    "modules-right": ["tray"],
-
     "wlr/taskbar": {
-    	"format": "{icon} {name}",
+    	"format": "{icon}",
+        "icon-size": 20,
     	"on-click": "minimize-raise",
         "on-click-middle": "close",
     	"tooltip-format": "{app_id}",
@@ -111,11 +99,20 @@
         "all-outputs": true
     },
 
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "format-disconnected": " ⚠ ",
+        "on-click": "~/.config/waybar/scripts/toggle_wifi.sh"
+    },
+
     "tray": {
-        "icon-size": 21,
+        "icon-size": 18,
         "spacing": 10,
     	"show-passive-items": true,
     },
+
+// Custom modules
 
     "custom/media": {
         "format": "{icon} {}",
@@ -131,6 +128,15 @@
         "on-scroll-up": "playerctl previous",
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
-}]    
+    },
+    
+    "custom/power": {
+        "format":"  ",
+        "on-click": "wlogout --protocol layer-shell -b 2",
+        "tooltip": "Shutdown menu"
+    },
 
+    "custom/workspaces":{
+        "exec": "~/.config/waybar/scripts/workspaces.sh"
+    }
+}  

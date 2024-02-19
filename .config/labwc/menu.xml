@@ -18,7 +18,9 @@
         </command>
       </action>
     </item>
-
+    
+    <separator />
+    
     <item label="Emby Theater" icon="emby-theater">
       <action name="Execute">
         <command>
@@ -27,8 +29,16 @@
       </action>
     </item>
     
-    <separator/>
+    <item label="LocalSend" icon="localsend">
+      <action name="Execute">
+        <command>
+          localsend
+        </command>
+      </action>
+    </item>
 
+    <separator />
+    
     <item label="Firefox" icon="firefox">
       <action name="Execute">
         <command>
@@ -44,25 +54,7 @@
         </command>
       </action>
     </item>
-
-    <separator/>
-    
-    <item label="LocalSend" icon="localsend">
-      <action name="Execute">
-        <command>
-          localsend
-        </command>
-      </action>
-    </item>
-
-    <item label="QOwnNotes" icon="QOwnNotes">
-      <action name="Execute">
-        <command>
-          QOwnNotes
-        </command>
-      </action>
-    </item>
-  
+   
     <separator/>
     
     <item label="Terminal" icon="alacritty">

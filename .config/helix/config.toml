@@ -3,7 +3,7 @@ theme = "sonokai"
 [editor]
 line-number = 'relative'
 bufferline = "always"
-text-width = 80
+# text-width = 100
 
 [editor.statusline]
 left = ["mode", "spinner", "separator"]
@@ -23,7 +23,10 @@ hidden = true
 "'"="'"
 
 [editor.soft-wrap]
-enable = true
-max-wrap = 25
-max-indent-retain = 20
-wrap-at-text-width = true
+# enable = true
+# max-wrap = 25
+# max-indent-retain = 20
+# wrap-at-text-width = true
+
+[editor.indent-guides]
+render = true

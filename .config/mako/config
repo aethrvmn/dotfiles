@@ -1,8 +1,8 @@
 output=DP-3
 layer=top
-background-color=#3d170e
+background-color=#0E3D17
 border-size=3
-border-color=#0E3D17
+border-color=#3d170e
 text-alignment=center
 
 
