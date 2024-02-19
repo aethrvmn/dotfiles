@@ -3,7 +3,7 @@
     "output": "DP-3", // Display at output
     "position": "top", // Waybar position (top|bottom|left|right)
     "reload_style_on_change": true,
-    "spacing": 0, // Gaps between modules (4px)i
+    "spacing": 0, // Gaps between modules (ex 4px)
     "exclusive": true,
     
     // Choose the order of the modules
@@ -21,7 +21,7 @@
 	"format-off": " ! ",
 	"format-connected": "  ",
 	"format-connected-battery": "{device_alias} {device_battery_percentage}%  ",
-    "on-click": "~/.config/waybar/scripts/toggle_bluetooth.sh",
+    "on-click": "~/.config/waybar/scripts/toggle_bluetooth",
     "on-click-right": "alacritty -e bluetoothctl"
     },
 
@@ -91,7 +91,7 @@
 
     "wlr/taskbar": {
     	"format": "{icon}",
-        "icon-size": 20,
+        "icon-size": 16,
     	"on-click": "minimize-raise",
         "on-click-middle": "close",
     	"tooltip-format": "{app_id}",
@@ -103,7 +103,7 @@
         "format-wifi": " ",
         "format-ethernet": "{ipaddr}/{cidr}  ",
         "format-disconnected": " ⚠ ",
-        "on-click": "~/.config/waybar/scripts/toggle_wifi.sh"
+        "on-click": "~/.config/waybar/scripts/toggle_wifi"
     },
 
     "tray": {
@@ -136,7 +136,9 @@
         "tooltip": "Shutdown menu"
     },
 
-    "custom/workspaces":{
-        "exec": "~/.config/waybar/scripts/workspaces.sh"
+    "custom/workspaces": {
+        "exec": "~/.config/waybar/scripts/workspaces",
+        // "on-scroll-up": "wtype -M win -M ctrl -k right",
+        // "on-scroll-down": "wtype -M win -M ctrl -k left"
     }
 }  
