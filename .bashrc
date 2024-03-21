@@ -59,7 +59,6 @@ custom_clear() {
 
 # Custom aliases
 alias clear=custom_clear
-alias hx=helix
 alias ollama-open='cd ~/Ollama && npm run dev & sleep 1 && firefox localhost:3000'
 alias zotero='~/Zotero/zotero'
 # alias venv ='source venv/bin/activate'

@@ -322,56 +322,6 @@
         <action name="Resize"/>
       </mousebind>
     </context>
-    <context name="TitleBar">
-      <mousebind button="Left" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-      </mousebind>
-      <mousebind button="Right" action="Click">
-        <action name="Focus"/>
-        <action name="Raise"/>
-      </mousebind>
-    </context>
-    <context name="Title">
-      <mousebind button="Left" action="Drag">
-        <action name="Move"/>
-      </mousebind>
-      <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
-      </mousebind>
-      <mousebind button="Right" action="Click">
-        <action name="ShowMenu" menu="client-menu"/>
-      </mousebind>
-    </context>
-    <context name="Maximize">
-      <mousebind button="Left" action="Click">
-        <action name="ToggleMaximize"/>
-      </mousebind>
-      <mousebind button="Right" action="Click">
-        <action name="ToggleMaximize" direction="horizontal"/>
-      </mousebind>
-      <mousebind button="Middle" action="Click">
-        <action name="ToggleMaximize" direction="vertical"/>
-      </mousebind>
-    </context>
-    <context name="WindowMenu">
-      <mousebind button="Left" action="Click">
-        <action name="ShowMenu" menu="client-menu"/>
-      </mousebind>
-      <mousebind button="Right" action="Click">
-        <action name="ShowMenu" menu="client-menu"/>
-      </mousebind>
-    </context>
-    <context name="Iconify">
-      <mousebind button="Left" action="Click">
-        <action name="Iconify"/>
-      </mousebind>
-    </context>
-    <context name="Close">
-      <mousebind button="Left" action="Click">
-        <action name="Close"/>
-      </mousebind>
-    </context>
     <context name="Client">
       <mousebind button="Left" action="Press">
         <action name="Focus"/>

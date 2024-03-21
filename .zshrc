@@ -27,12 +27,13 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # Fortune and cowsay on terminal start
-fortune | cowsay
+cowsay 'Hello World!'
 
 # Function to clear the screen and show fortune and cowsay
 custom_clear() {
     command clear
-    fortune | cowsay
+    cowsay 'Hello World!'
 }
 
 alias clear=custom_clear
+eval "$(atuin init zsh)"
