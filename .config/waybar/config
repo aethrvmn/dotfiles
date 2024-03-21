@@ -138,7 +138,7 @@
 
     "custom/workspaces": {
         "exec": "~/.config/waybar/scripts/workspaces",
-        // "on-scroll-up": "wtype -M win -M ctrl -k right",
-        // "on-scroll-down": "wtype -M win -M ctrl -k left"
+        "on-scroll-up": "wtype -M win -M ctrl -k right",
+        "on-scroll-down": "wtype -M win -M ctrl -k left"
     }
 }  

@@ -1,4 +1,4 @@
 profile {
-	output DP-2 position 0,0 mode 1920x1080 transform 90
-	output DP-3 position 1080,550 mode 1920x1080
+	output HDMI-A-1 position 0,0 mode 1920x1080@120Hz transform 90 
+	output DP-3 position 1080,550 mode 1920x1080@120Hz
 }

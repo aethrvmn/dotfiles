@@ -9,6 +9,7 @@ fi
 
 #Desable ctrl+S and ctrl+Q
 stty -ixon
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
@@ -53,13 +54,14 @@ shopt -s checkwinsize
 # Function to clear the screen and show fortune and cowsay
 custom_clear() {
     command clear
-    fortune | cowsay
+    echo 'Hello World!' | cowsay
 }
 
 # Custom aliases
 alias clear=custom_clear
 alias hx=helix
 alias ollama-open='cd ~/Ollama && npm run dev & sleep 1 && firefox localhost:3000'
+alias zotero='~/Zotero/zotero'
 # alias venv ='source venv/bin/activate'
 
 # Aliases for color options
@@ -73,5 +75,7 @@ alias cp='cp -i'
 alias rm='rm -i'
 
 # Show fortune and cowsay when the terminal is opened
-fortune | cowsay
+# fortune | cowsay
+echo 'Hello World!' | cowsay
 
+eval "$(atuin init bash)"

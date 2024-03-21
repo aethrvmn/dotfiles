@@ -12,7 +12,7 @@
   </core>
   <!-- <font><theme> can be defined without an attribute to set all places -->
   <theme>
-    <name>Vent-dark</name>
+    <name/>
     <cornerRadius>8</cornerRadius>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
@@ -61,7 +61,6 @@
     <range>1</range>
     <topMaximize>yes</topMaximize>
   </snapping>
-
   <!-- Workspaces can be configured like this: -->
   <desktops>
     <popupTime>1000</popupTime>
@@ -133,10 +132,10 @@
     <repeatRate>25</repeatRate>
     <repeatDelay>600</repeatDelay>
     <keybind key="W-r">
-      <action name="Reconfigure" />
+      <action name="Reconfigure"/>
     </keybind>
     <keybind key="F3">
-      <action name="Execute" command="grim" />
+      <action name="Execute" command="grim"/>
     </keybind>
     <keybind key="F4">
       <action name="Execute">
@@ -152,7 +151,7 @@
     <keybind key="W-w">
       <action name="Execute" command="firefox"/>
     </keybind>
-    <keybind key="W-S-p">
+    <keybind key="W-S-w">
       <action name="Execute" command="firefox --private-window"/>
     </keybind>
     <keybind key="W-space">
@@ -172,30 +171,27 @@
     </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop" to="1"/>
-      <action name="Execute"
-        command="bash -c 'echo 1 > /tmp/workspace'" />
+      <action name="Execute" command="bash -c 'echo 1 &gt; /tmp/workspace'"/>
     </keybind>
     <keybind key="W-2">
       <action name="GoToDesktop" to="2"/>
-      <action name="Execute" command = "bash -c 'echo 2 > /tmp/workspace'" />
+      <action name="Execute" command="bash -c 'echo 2 &gt; /tmp/workspace'"/>
     </keybind>
     <keybind key="W-3">
       <action name="GoToDesktop" to="3"/>
-      <action name="Execute" command = "bash -c 'echo 3 > /tmp/workspace'" />
+      <action name="Execute" command="bash -c 'echo 3 &gt; /tmp/workspace'"/>
     </keybind>
     <keybind key="W-4">
       <action name="GoToDesktop" to="4"/>
-      <action name="Execute" command = "bash -c 'echo 4 > /tmp/workspace'" />
+      <action name="Execute" command="bash -c 'echo 4 &gt; /tmp/workspace'"/>
     </keybind>
     <keybind key="W-C-Left">
-      <action name="GoToDesktop" to="left" />
-      <action name="Execute"
-        command="bash -c 'echo left > /tmp/workspace'" />
+      <action name="GoToDesktop" to="left"/>
+      <action name="Execute" command="bash -c 'echo left &gt; /tmp/workspace'"/>
     </keybind>
     <keybind key="W-C-Right">
-      <action name="GoToDesktop" to="right" />
-      <action name="Execute"
-        command="bash -c 'echo right > /tmp/workspace'" />
+      <action name="GoToDesktop" to="right"/>
+      <action name="Execute" command="bash -c 'echo right &gt; /tmp/workspace'"/>
     </keybind>
     <keybind key="W-a">
       <action name="ToggleMaximize"/>
@@ -390,7 +386,6 @@
         <action name="Raise"/>
       </mousebind>
     </context>
-
     <context name="Root">
       <mousebind button="Left" action="Press">
         <action name="ShowMenu" menu="root-menu"/>
@@ -403,11 +398,11 @@
       </mousebind>
       <mousebind direction="Up" action="Scroll">
         <action name="GoToDesktop" to="right" wrap="yes"/>
-        <action name="Execute" command="bash -c 'echo right > /tmp/workspace'" />
+        <action name="Execute" command="bash -c 'echo right &gt; /tmp/workspace'"/>
       </mousebind>
       <mousebind direction="Down" action="Scroll">
         <action name="GoToDesktop" to="left" wrap="yes"/>
-        <action name="Execute" command="bash -c 'echo left > /tmp/workspace'" />
+        <action name="Execute" command="bash -c 'echo left &gt; /tmp/workspace'"/>
       </mousebind>
     </context>
   </mouse>
@@ -438,8 +433,7 @@
       <disableWhileTyping/>
     </device>
   </libinput>
-  
-    <!--
+  <!--
     # Window Rules
     #   - Criteria can consist of 'identifier' or 'title' or both (in which case
     #     AND logic is used).
@@ -476,18 +470,13 @@
       </windowRule>
     </windowRules>
   -->
-
-  
   <windowRules>
-    
     <windowRule identifier="*">
       <action name="ToggleDecorations"/>
     </windowRule>
-
-<!-- For some reason Steam needs this -->
+    <!-- For some reason Steam needs this -->
     <windowRule identifier="*" serverDecoration="no">
       <action name="ToggleDecorations"/>
     </windowRule>
-    
   </windowRules>
 </labwc_config>

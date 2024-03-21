@@ -22,10 +22,10 @@ MOZ_ENABLE_WAYLAND=1
 ## Set cursor theme and size. Find system icons themes with:
 ## `find /usr/share/icons/ -type d -name "cursors"`
 
-XCURSOR_THEME=Adwaita
-XCURSOR_SIZE=24
 
 ## BEMENU stuff
 BEMENU_OPTS= --center --wrap --ignorecase --border 2 --border-radius 10 --prompt '>' --list 12 --bdr '#3d170e' --no-overlap --width-factor 0.5 --tf '#ffffff' --tb '#3d170e' --nb '#3d170e' --ab '#0E3D17' --fn 'Literation Mono Nerd Font 14' --hb '#662718' --hf '#ffffff'
 
 BEMENU_BACKEND=wayland
+XCURSOR_THEME=Adwaita
+XCURSOR_SIZE=24
