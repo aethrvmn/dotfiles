@@ -7,7 +7,7 @@
     "exclusive": true,
     
     // Choose the order of the modules
-    "modules-left": ["custom/media", "pulseaudio", "custom/workspaces"],
+    "modules-left": ["custom/workspaces"],
     
     "modules-center": ["wlr/taskbar"],
     
