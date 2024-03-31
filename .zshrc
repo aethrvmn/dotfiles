@@ -1,39 +1,31 @@
-# ~/.zshrc
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Function to display a git icon next to the username
-parse_git_branch() {
-    local branch=$(git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/\1/p')
-    if [ -n "$branch" ]; then
-        local git_status=$(git status --porcelain 2> /dev/null)
-        if [ -z "$git_status" ]; then
-            echo " ($branch)"
-        else
-            echo " ($branch*)"
-        fi
-    fi
-}
-
-# Set the command prompt
-PROMPT='%F{blue}%B%n%b%f%~%F{green}$(parse_git_branch)%f %# '
-setopt PROMPT_SUBST
+# Allows you to cd into directory by typing the directory name.
+# setopt autocd
 
 # Enable ls colors
 export LSCOLORS="GxFxCxDxBxegedabagaced"
 
 # Aliases for color options
 alias ls='ls -G'
+alias ll='ls -l'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Fortune and cowsay on terminal start
-cowsay 'Hello World!'
+# Custom aliases
+alias ..='cd ..'
+alias cp='cp -i'
+alias rm='rm -i'
 
-# Function to clear the screen and show fortune and cowsay
-custom_clear() {
-    command clear
-    cowsay 'Hello World!'
-}
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
-alias clear=custom_clear
-eval "$(atuin init zsh)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+clear
