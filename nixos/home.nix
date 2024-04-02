@@ -5,6 +5,15 @@
   home.homeDirectory = "/home/valapeos";
   home.stateVersion = "23.11";
   
+  
+  # Raw config files
+  home.file.".config/helix".source = /home/valapeos/dotfiles/.config/helix;
+  home.file.".config/kanshi".source = /home/valapeos/dotfiles/.config/kanshi;
+  home.file.".config/labwc".source = /home/valapeos/dotfiles/.config/labwc;
+  home.file.".config/mako".source = /home/valapeos/dotfiles/.config/mako;
+  home.file.".config/waybar".source = /home/valapeos/dotfiles/.config/waybar;
+  home.file.".config/wlogout".source = /home/valapeos/dotfiles/.config/wlogout;
+
   home.packages = with pkgs; [
     _1password-gui
     atuin
