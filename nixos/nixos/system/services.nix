@@ -18,9 +18,8 @@
       enable = true;
 
       settings = {
-        default_session={
+        defaut_session={
           command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --time --issue --asterisks --cmd labwc";
-          user = "greeter";
         };
       };
     };
