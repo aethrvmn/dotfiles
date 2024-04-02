@@ -17,7 +17,7 @@ mako >/dev/null 2>&1 &
 thunar --daemon &
 
 swww img -o DP-3 ~/Wallpapers/hobbits.jpg &
-swww img -o HDMI-A-1 ~/Wallpapers/bluemana.png --resize crop &
+swww img -o DP-2 ~/Wallpapers/bluemana.png --resize crop &
 
 # Define custom programs to start
 spotify &

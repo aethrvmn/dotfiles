@@ -197,21 +197,34 @@
       <action name="GoToDesktop" to="right"/>
       <action name="Execute" command="bash -c 'echo right &gt; /tmp/workspace'"/>
     </keybind>
-    <keybind key="W-a">
-      <action name="ToggleMaximize"/>
-    </keybind>
     <keybind key="W-Left">
-      <action name="MoveToEdge" direction="left"/>
+      <action name="SnapToEdge" direction="left"/>
+      <action name="Focus" />
+      <action name="Raise" />
     </keybind>
     <keybind key="W-Right">
-      <action name="MoveToEdge" direction="right"/>
+      <action name="SnapToEdge" direction="right"/>
+      <action name="Focus" />
+      <action name="Raise" />
     </keybind>
     <keybind key="W-Up">
-      <action name="MoveToEdge" direction="up"/>
+      <action name="SnapToEdge" direction="up"/>
+      <action name="Focus" />
+      <action name="Raise" />
     </keybind>
     <keybind key="W-Down">
-      <action name="MoveToEdge" direction="down"/>
+      <action name="SnapToEdge" direction="down"/>
+      <action name="Focus" />
+      <action name="Raise" />
     </keybind>
+    <keybind key="W-S-Up">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="W-S-Down">
+      <action name="SnapToRegion" region="center" />
+    </keybind>
+
+    <!-- meta+Shift keybinds
     <keybind key="W-S-Left">
       <action name="SnapToEdge" direction="left"/>
     </keybind>
@@ -224,6 +237,7 @@
     <keybind key="W-S-Down">
       <action name="SnapToEdge" direction="down"/>
     </keybind>
+    -->
     <keybind key="A-Space">
       <action name="ShowMenu" menu="client-menu"/>
     </keybind>

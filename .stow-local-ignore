@@ -21,6 +21,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-configuration.nix
-
+\nixos
+*.nix
 \fonts
