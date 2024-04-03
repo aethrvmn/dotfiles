@@ -7,7 +7,7 @@
   
   
   # Raw config files
-  home.file.".config/helix".source = /home/valapeos/dotfiles/.config/helix;
+    home.file.".config/helix".source = /home/valapeos/dotfiles/.config/helix;
   home.file.".config/kanshi".source = /home/valapeos/dotfiles/.config/kanshi;
   home.file.".config/labwc".source = /home/valapeos/dotfiles/.config/labwc;
   home.file.".config/mako".source = /home/valapeos/dotfiles/.config/mako;
@@ -41,6 +41,12 @@
     wlr-randr
     zsh-powerlevel10k
   ];
+  
+  programs.git = {
+    enable = true;
+    userName  = "Vasilis Valatsos";
+    userEmail = "vasilvalat@gmail.com";
+  };
 
   programs.alacritty = {
     enable = true;
@@ -52,6 +58,8 @@
         decorations = "None";
         opacity = 0.95; #Until blur is an option
         blur = true;
+        dimensions.columns = 80;
+        dimensions.lines = 24;
       };
 
       font = {

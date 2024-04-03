@@ -79,11 +79,11 @@
   environment.systemPackages = with pkgs; [
     alacritty
     bash
-    git
     greetd.tuigreet
     helix
     hugo
     localsend
+    lutris
     obs-studio
     pavucontrol
     playerctl
