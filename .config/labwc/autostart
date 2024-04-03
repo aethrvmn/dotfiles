@@ -16,7 +16,8 @@ mako >/dev/null 2>&1 &
 # Start the Thunar daemon for better startup
 thunar --daemon &
 
-swww img -o DP-3 ~/dotfiles/wallpapers/hobbits.jpg &
+# Deploy swww wallpapers
+swww img -o DP-1 ~/dotfiles/wallpapers/hobbits.jpg &
 swww img -o DP-2 ~/dotfiles/wallpapers/bluemana.png &
 swww img -o HDMI-A-1 ~/dotfiles/wallpapers/statues.jpg &
 

@@ -36,6 +36,7 @@
     swappy
     swww
     texstudio
+    vesktop
     wlogout
     wlr-randr
     zsh-powerlevel10k
@@ -109,12 +110,13 @@
 
       # Nix specific
       nix-update = "sudo cp -r /etc/nixos ~/dotfiles && sudo nixos-rebuild switch";
-
+      nix-config = "sudo -E hx /etc/nixos";
+      
       # Thesis specific
       thesis = "cd ~/Projects/thesis && source venv/bin/activate";
-      thesis-tex = "vd ~/Documents/tex/thesis";
+      thesis-tex = "cd ~/Documents/tex/thesis";
 
-      #Aliases for color options
+      # Aliases for color options
       ls = "ls -G";
       ll = "ls -l";
       grep = "grep --color=auto";
@@ -145,5 +147,37 @@
     
   };
 
-  
+  # gtk = {
+  #   enable = true;
+
+  #   iconTheme = {
+  #     name = "Papirus-Dark";
+  #     package = pkgs.papirus-icon-theme;
+  #   };
+
+  #   theme = {
+  #     name = "Adwaita-dark";
+  #     package = pkgs.gnome.gnome-themes-extra;
+  #   };
+
+  #   gtk3.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=1
+  #     '';
+  #   };
+
+  #   gtk4.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=1
+  #     '';
+  #   };
+  # };
+
+  # qt = {
+  #   enable = true;
+  #   platformTheme = "gnome";
+  #   style = "adwaita-dark";
+  # };
+
+
 }

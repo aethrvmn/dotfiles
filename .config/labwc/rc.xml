@@ -10,25 +10,14 @@
     <adaptiveSync>no</adaptiveSync>
     <reuseOutputMode>no</reuseOutputMode>
   </core>
+  
   <!-- <font><theme> can be defined without an attribute to set all places -->
   <theme>
-    <name/>
+    <name>Triste-Crimson</name>
     <cornerRadius>8</cornerRadius>
     <keepBorder>yes</keepBorder>
-    <font place="ActiveWindow">
-      <name>sans</name>
-      <size>10</size>
-      <slant>normal</slant>
-      <weight>normal</weight>
-    </font>
-    <font place="MenuItem">
-      <name>sans</name>
-      <size>10</size>
-      <slant>normal</slant>
-      <weight>normal</weight>
-    </font>
-    <font place="OnScreenDisplay">
-      <name>sans</name>
+    <font>
+      <name>MesloLGS NF</name>
       <size>10</size>
       <slant>normal</slant>
       <weight>normal</weight>

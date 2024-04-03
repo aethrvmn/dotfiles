@@ -36,8 +36,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  qt.enable = true;
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "el_GR.UTF-8";
     LC_IDENTIFICATION = "el_GR.UTF-8";
@@ -147,11 +145,38 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+
+  # gtk = {
+  #   enable = true;
+
+  #   iconTheme = {
+  #     name = "Papirus-Dark";
+  #     package = pkgs.papirus-icon-theme;
+  #   };
+
+  #   theme = {
+  #     name = "Adwaita-dark";
+  #     package = pkgs.gnome.gnome-themes-extra;
+  #   };
+
+  #   gtk3.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=1
+  #     '';
+  #   };
+
+  #   gtk4.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=1
+  #     '';
+  #   };
+  # };
+
+  # qt = {
+  #   enable = true;
+  #   platformTheme = "gnome";
+  #   style = "adwaita-dark";
+  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
