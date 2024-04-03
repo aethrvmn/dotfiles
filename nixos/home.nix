@@ -7,7 +7,7 @@
   
   
   # Raw config files
-    home.file.".config/helix".source = /home/valapeos/dotfiles/.config/helix;
+  home.file.".config/helix".source = /home/valapeos/dotfiles/.config/helix;
   home.file.".config/kanshi".source = /home/valapeos/dotfiles/.config/kanshi;
   home.file.".config/labwc".source = /home/valapeos/dotfiles/.config/labwc;
   home.file.".config/mako".source = /home/valapeos/dotfiles/.config/mako;
@@ -117,7 +117,7 @@
     shellAliases = {
 
       # Nix specific
-      nix-update = "sudo cp -r /etc/nixos ~/dotfiles && sudo nixos-rebuild switch";
+      nix-update = "sudo cp -r /etc/nixos ~/dotfiles && cp -r ~/.p10k-config ~/dotfiles && sudo nixos-rebuild switch";
       nix-config = "sudo -E hx /etc/nixos";
       
       # Thesis specific
@@ -155,37 +155,35 @@
     
   };
 
-  # gtk = {
-  #   enable = true;
-
+  gtk = {
+    enable = true;
+  
+    
   #   iconTheme = {
   #     name = "Papirus-Dark";
   #     package = pkgs.papirus-icon-theme;
   #   };
 
-  #   theme = {
-  #     name = "Adwaita-dark";
-  #     package = pkgs.gnome.gnome-themes-extra;
-  #   };
+    # theme = {
+    #   name = "Adwaita-dark";
+    #   package = pkgs.gnome.gnome-themes-extra;
+    # };
 
-  #   gtk3.extraConfig = {
-  #     Settings = ''
-  #       gtk-application-prefer-dark-theme=1
-  #     '';
-  #   };
+    gtk3.extraConfig = {
+        gtk-application-prefer-dark-theme=1;
+      };
 
-  #   gtk4.extraConfig = {
-  #     Settings = ''
-  #       gtk-application-prefer-dark-theme=1
-  #     '';
-  #   };
-  # };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme=1;
+    };
+  
+  };
 
-  # qt = {
-  #   enable = true;
-  #   platformTheme = "gnome";
-  #   style = "adwaita-dark";
-  # };
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style.name = "adwaita-dark";
+  };
 
 
 }
