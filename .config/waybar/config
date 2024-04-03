@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/workspaces"],
     
-    "modules-center": ["wlr/taskbar"],
+    // "modules-center": ["wlr/taskbar"],
     
     "modules-right": ["network", "bluetooth", "cpu", "memory", "temperature", "tray", "clock", "custom/power"],
 

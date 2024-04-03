@@ -89,11 +89,13 @@
     obs-studio
     pavucontrol
     playerctl
+    python311Full
     python311Packages.pip
-    python3
+    python311Packages.python-lsp-server
     qbittorrent
     slurp
     spotify
+    texliveFull
     thunderbird
     udisks
     ventoy

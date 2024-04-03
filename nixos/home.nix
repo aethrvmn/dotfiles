@@ -35,6 +35,7 @@
     slurp
     swappy
     swww
+    texstudio
     wlogout
     wlr-randr
     zsh-powerlevel10k
@@ -108,6 +109,10 @@
 
       # Nix specific
       nix-update = "sudo cp -r /etc/nixos ~/dotfiles && sudo nixos-rebuild switch";
+
+      # Thesis specific
+      thesis = "cd ~/Projects/thesis && source venv/bin/activate";
+      thesis-tex = "vd ~/Documents/tex/thesis";
 
       #Aliases for color options
       ls = "ls -G";

@@ -7,6 +7,6 @@
 
     firefox.enable = true;
 
-    
+    file-roller.enable = true;
   };
 }
