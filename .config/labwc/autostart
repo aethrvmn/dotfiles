@@ -22,4 +22,9 @@ swww img -o DP-2 ~/dotfiles/wallpapers/bluemana.png &
 swww img -o HDMI-A-1 ~/dotfiles/wallpapers/statues.jpg &
 
 # Define custom programs to start
+
+# Music client
 spotify &
+
+# Discord (chat) client
+vesktop &
