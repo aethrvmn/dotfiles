@@ -51,9 +51,16 @@
  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.valapeos = {
     isNormalUser = true;
-    description = "Vasilis Valatsos";
+    description = "Vasilis";
+    password = "gang";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+  };
+
+  users.users.konstantina = {
+    isNormalUser = true;
+    password = "gang";
+    description = "Konstantina";
+    extraGroups = [ "networkmanager" ];
   };
 
   users.defaultUserShell = pkgs.zsh;
@@ -61,7 +68,8 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.valapeos = import ./home.nix;
+    users.valapeos = import ./vp.nix;
+    users.konstantina = import ./ks.nix;
   };
   
   # Allow unfree packages
@@ -83,7 +91,6 @@
     helix
     hugo
     localsend
-    lutris
     obs-studio
     pavucontrol
     playerctl
@@ -119,26 +126,22 @@
   # };
 
   # General programs that need to be enabled
-  programs.zsh.enable = true;
- 
-  programs.firefox.enable = true;
-  
-  programs.waybar.enable=true;
+  programs = {
+    zsh.enable = true;
 
-  programs.steam = {
-    enable = true;
-  };
-  
-  programs.thunar ={
-    enable = true;
+    steam.enable = true;
     
-    plugins = with pkgs.xfce; [
-      thunar-archive-plugin
-      thunar-volman
-      thunar-media-tags-plugin
-    ];
-  };
+    thunar = {
+      enable = true;
 
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-media-tags-plugin
+        thunar-volman
+      ];
+    };
+
+  };
   # Env settings
 
   environment.sessionVariables = {
