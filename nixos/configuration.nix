@@ -103,6 +103,9 @@
     texliveFull
     thunderbird
     udisks
+    linuxPackages.v4l2loopback
+    usbutils
+    v4l-utils
     ventoy
     wget
     wineWowPackages.waylandFull

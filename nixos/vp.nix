@@ -26,6 +26,7 @@
     imv
     j4-dmenu-desktop
     kanshi
+    labwc-tweaks
     lutris
     mako
     mpd
