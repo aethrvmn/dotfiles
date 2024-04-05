@@ -3,6 +3,7 @@
 
   <menu id="root-menu" label="root-menu">
 
+    <title label="Main Menu" />
     <item label="Steam" icon="steam">
       <action name="Execute">
         <command>

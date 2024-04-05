@@ -1,0 +1,33 @@
+# All credits to the Orzhov Guild
+
+## Global
+
+border.width: 1
+padding.width: 1
+menu.overlap: -6
+
+## Window
+
+border.width: 1
+window.active.border.color: #bebcae
+window.inactive.border.color: #bebcae
+
+
+
+## Menu
+
+menu.border.width: 1
+
+menu.title.bg: flat
+menu.title.bg.color: #4A5152
+menu.title.text.color: #BEBCAE80
+menu.title.text.justify: left
+
+menu.items.bg: flat
+menu.items.bg.color: #F7F6F3
+menu.items.text.color: #4A5152
+
+
+menu.items.active.bg: flat
+menu.items.active.bg.color: #4A5152
+menu.items.active.text.color: #F7F6F3

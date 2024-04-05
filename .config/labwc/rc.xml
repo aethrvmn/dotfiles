@@ -13,8 +13,8 @@
   
   <!-- <font><theme> can be defined without an attribute to set all places -->
   <theme>
-    <name>Raven</name>
-    <cornerRadius>8</cornerRadius>
+    <name>Orzhov</name>
+    <cornerRadius>0</cornerRadius>
     <keepBorder>yes</keepBorder>
     <font>
       <name>MesloLGS NF</name>
