@@ -9,10 +9,10 @@ Included are also the wallpapers I use. I ~~stole~~ found them online on differe
 
 - OS: NixOS
 - Wayland Compositor: Labwc
+- Launcher: bemenu
 - Bar: Waybar
 - Notifications: Mako
 - Terminal Emulator: Alacritty
 - Display Configuration: Kanshi
-- Login/Logout: Wlogout
 - Text Editor: Helix
 - Shell: Zsh with Powerlevel10k prompt
