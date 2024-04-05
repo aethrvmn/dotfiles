@@ -5,10 +5,11 @@
 }
 
 window#waybar {
-    background: rgba(71, 33, 16, 0);
+    background: rgba(190, 188, 174, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    border-radius: 10px;
 }
 
 window#waybar.hidden {
@@ -110,20 +111,18 @@ button:hover {
 }
 
 #clock {
-    background-color: #4c4e65;
-    border-radius: 25px 0px 0px 25px;
-    padding-left: 15px;
-    margin-right: 1px;
-    margin-left: 2px;
+    background-color: #4A5152;
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 #cpu {
-    background-color: #0E3D17;
-    color: white;
+    background-color: #526A78;
 }
 
 #memory {
-    background-color: #0E3D17;
+    background-color: #526A78;
 }
 
 #pulseaudio {
@@ -135,29 +134,30 @@ button:hover {
 }
 
 #network {
-    background-color: #0E3D17;
-    border-radius: 25px 0px 0px 25px;
+    background-color: #526A78;
+    border-radius: 10px 0px 0px 10px;
     padding-left: 15px;
 }
 
 #network.disconnected {
-    background-color: #0E3D17;
+    background-color: #526A78;
     border-radius: 25px 0px 0px 25px;
     padding-left: 15px;
 }
 
 #bluetooth {
-    background-color: #0E3D17;    
+    background-color: #526A78;    
 }
 
 #custom-workspaces {
-    background-color: #4c4e65;
-    border-radius: 0px 25px 25px 0px;
+    background-color: #4A5152;
+    border-radius: 10px;
     padding-left: 10px;
     padding-right: 15px;
 }
 #custom-power {
-    background-color: #4c4e65;
+    border-radius: 10px;
+    background-color: #4A5152;
 }
 
 #custom-media {
@@ -167,8 +167,7 @@ button:hover {
 }
 
 #temperature {
-    background-color: #0E3D17;
-    margin-right: 1px
+    background-color: #526A78;
 }
 
 #temperature.critical {
@@ -176,9 +175,9 @@ button:hover {
 }
 
 #tray {
-    background-color: #0E3D17;
-    border-radius: 0px 25px 25px 0px;
-    padding-right: 15px;
+    background-color: #4A5152;
+    border-radius: 10px 10px;
+    padding-right: 5px;
 }
 
 #tray > .passive {

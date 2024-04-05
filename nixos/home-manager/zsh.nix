@@ -17,7 +17,7 @@
     shellAliases = {
 
       # Nix specific
-      nix-update = "sudo cp -r /etc/nixos ~/dotfiles && cp -r ~/.p10k-config ~/dotfiles && sudo nixos-rebuild switch";
+      nix-update = "sudo cp -r /etc/nixos ~/dotfiles && sudo nixos-rebuild switch";
       nix-config = "sudo -E hx /etc/nixos";
 
 

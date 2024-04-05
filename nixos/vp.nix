@@ -15,7 +15,6 @@
   
   home.packages = with pkgs; [
     _1password-gui
-    atuin
     bemenu
     btop
     cowsay
@@ -37,24 +36,12 @@
     swww
     texstudio
     vesktop
-    wlogout
     wlr-randr
     zsh-powerlevel10k
   ];
 
   gtk = {
     enable = true;
-  
-    
-  #   iconTheme = {
-  #     name = "Papirus-Dark";
-  #     package = pkgs.papirus-icon-theme;
-  #   };
-
-    # theme = {
-    #   name = "Adwaita-dark";
-    #   package = pkgs.gnome.gnome-themes-extra;
-    # };
 
     gtk3.extraConfig = {
         gtk-application-prefer-dark-theme=1;
@@ -65,12 +52,4 @@
     };
   
   };
-
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style.name = "adwaita-dark";
-  };
-
-
 }

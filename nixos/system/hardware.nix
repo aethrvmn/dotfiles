@@ -12,5 +12,7 @@
       amdvlk
       rocmPackages.clr.icd
     ];
+
+    pulseaudio.enable = false;
   };
 }

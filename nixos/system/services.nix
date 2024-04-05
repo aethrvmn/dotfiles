@@ -21,6 +21,7 @@
         # }];
       };
       desktopManager.plasma5.enable = true;
+      # desktopManager.gnome.enable = true;
     };
 
     printing.enable = true;

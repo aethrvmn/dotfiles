@@ -17,7 +17,7 @@
       };
 
       font = {
-        size = 14;
+        size = 12;
 
         normal.family = "MesloLGS NF";
       };
