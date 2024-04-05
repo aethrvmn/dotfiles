@@ -34,7 +34,7 @@
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "year",
-            "mode-mon-col": 3,
+            "mode-mon-col": 4,
       		"format": {
       			"months":     "<span color='#ffead3'><b>{}</b></span>",
       			"days":       "<span color='#ecc6d9'><b>{}</b></span>",
