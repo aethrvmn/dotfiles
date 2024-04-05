@@ -24,8 +24,10 @@ MOZ_ENABLE_WAYLAND=1
 
 
 ## BEMENU stuff
-BEMENU_OPTS= --center --wrap --ignorecase --border 2 --border-radius 10 --prompt '>' --list 12 --bdr '#3d170e' --no-overlap --width-factor 0.5 --tf '#ffffff' --tb '#3d170e' --nb '#3d170e' --ab '#0E3D17' --fn 'Literation Mono Nerd Font 14' --hb '#662718' --hf '#ffffff'
+BEMENU_OPTS= -n -i --tb "#1a1a1a" --tf "#268bd2" --fb "#1a1a1a" --nb "#1a1a1a" --ab "#1a1a1a" --hb "#1a1a1a" --hf "#268bd2" --line-height 30 "$@" --center --wrap --ignorecase --prompt '>' --list 12 --no-overlap --width-factor 0.5 --fn 'MesloLGS NF'
+
 
 BEMENU_BACKEND=wayland
-XCURSOR_THEME=Adwaita
+
+XCURSOR_THEME=Breeze
 XCURSOR_SIZE=24

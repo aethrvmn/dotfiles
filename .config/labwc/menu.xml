@@ -84,8 +84,11 @@
     <item label="Logout">
       <action name="Exit"></action>
     </item>
+     <item label="Reboot">
+      <action name="Execute" command="systemctl reboot"/>
+    </item>
     <item label="Shutdown">
-      <action name="Execute" command="wlogout -b 2"/>
+      <action name="Execute" command="systemctl poweroff"/>
     </item>
  
   </menu> <!-- sys-menu -->

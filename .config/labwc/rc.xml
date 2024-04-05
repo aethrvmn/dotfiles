@@ -13,7 +13,7 @@
   
   <!-- <font><theme> can be defined without an attribute to set all places -->
   <theme>
-    <name>Triste-Crimson</name>
+    <name>Raven</name>
     <cornerRadius>8</cornerRadius>
     <keepBorder>yes</keepBorder>
     <font>
@@ -350,9 +350,9 @@
       <mousebind button="Right" action="Press">
         <action name="ShowMenu" menu="sys-menu"/>
       </mousebind>
-      <mousebind button="Middle" action="Press">
-        <action name="ShowMenu" menu="root-menu"/>
-      </mousebind>
+      // <mousebind button="Middle" action="Press">
+      //   <action name="ShowMenu" menu="root-menu"/>
+      // </mousebind>
       <mousebind direction="Up" action="Scroll">
         <action name="GoToDesktop" to="right" wrap="yes"/>
         <action name="Execute" command="bash -c 'echo right &gt; /tmp/workspace'"/>
