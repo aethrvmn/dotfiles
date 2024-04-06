@@ -22,6 +22,9 @@ MOZ_ENABLE_WAYLAND=1
 ## Set cursor theme and size. Find system icons themes with:
 ## `find /usr/share/icons/ -type d -name "cursors"`
 
+XCURSOR_THEME=breeze_cursors
+XCURSOR_SIZE=24
+
 
 ## BEMENU stuff
 BEMENU_OPTS= -n -i --tb "#1a1a1a" --tf "#268bd2" --fb "#1a1a1a" --nb "#1a1a1a" --ab "#1a1a1a" --hb "#1a1a1a" --hf "#268bd2" --line-height 30 "$@" --center --wrap --ignorecase --prompt '>' --list 12 --no-overlap --width-factor 0.5 --fn 'MesloLGS NF'

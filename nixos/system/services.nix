@@ -11,8 +11,11 @@
 
     # This is broken and I am not smart enough to fix it
       displayManager = {
-        sddm.enable = true;
-        sddm.wayland.enable = true;
+         sddm={
+          enable = true;
+          wayland.enable = true;
+        };
+        
         
         # session = [{
           # manage = "desktop";
