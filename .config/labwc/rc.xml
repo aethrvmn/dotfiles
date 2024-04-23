@@ -354,12 +354,12 @@
       //   <action name="ShowMenu" menu="root-menu"/>
       // </mousebind>
       <mousebind direction="Up" action="Scroll">
-        <action name="GoToDesktop" to="right" wrap="yes"/>
-        <action name="Execute" command="bash -c 'echo right &gt; /tmp/workspace'"/>
-      </mousebind>
-      <mousebind direction="Down" action="Scroll">
         <action name="GoToDesktop" to="left" wrap="yes"/>
         <action name="Execute" command="bash -c 'echo left &gt; /tmp/workspace'"/>
+      </mousebind>
+      <mousebind direction="Down" action="Scroll">
+        <action name="GoToDesktop" to="right" wrap="yes"/>
+        <action name="Execute" command="bash -c 'echo right &gt; /tmp/workspace'"/>
       </mousebind>
     </context>
   </mouse>

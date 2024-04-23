@@ -1,9 +1,10 @@
 # Set background image.
-swww init &
+swww-daemon &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
 kanshi >/dev/null 2>&1 &
+xrandr --output DP-1 --primary &
 
 # Launch a panel such as yambar or waybar.
 waybar >/dev/null 2>&1 &
@@ -19,12 +20,22 @@ thunar --daemon &
 # Deploy swww wallpapers
 swww img -o HDMI-A-1 ~/dotfiles/wallpapers/hobbits.jpg &
 swww img -o DP-2 ~/dotfiles/wallpapers/bluemana.png &
-swww img -o DPI-1 ~/dotfiles/wallpapers/statues.jpg &
+swww img -o DP-1 ~/dotfiles/wallpapers/statues.jpg &
 
 # Define custom programs to start
 
-# Music client
+## Music client
 spotify &
 
-# Discord (chat) client
-vencorddesktop &
+## Chat clients
+### Discord
+vesktop &
+
+### Telegram
+telegram-desktop &
+
+### Whatsapp
+whatsapp-for-linux &
+
+### Mail
+thunderbird &

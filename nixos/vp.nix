@@ -34,9 +34,12 @@
     slurp
     swappy
     swww
+    telegram-desktop
     texstudio
     vesktop
+    whatsapp-for-linux
     wlr-randr
+    zotero
     zsh-powerlevel10k
   ];
 

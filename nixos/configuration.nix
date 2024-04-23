@@ -7,14 +7,18 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      <home-manager/nixos>
       ./hardware-configuration.nix
+
+      # Enable home manager
+      <home-manager/nixos>
+
       # Custom modules
       ./system/boot.nix
       ./system/hardware.nix
       ./system/network.nix
       ./system/programs.nix
       ./system/services.nix
+      # ./system/index-db.nix
     ];
 
   security.polkit.enable = true;
@@ -56,20 +60,12 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  users.users.konstantina = {
-    isNormalUser = true;
-    password = "gang";
-    description = "Konstantina";
-    extraGroups = [ "networkmanager" ];
-  };
-
   users.defaultUserShell = pkgs.zsh;
 
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     users.valapeos = import ./vp.nix;
-    users.konstantina = import ./ks.nix;
   };
   
   # Allow unfree packages
@@ -87,6 +83,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     bash
+    gcc
     greetd.tuigreet
     helix
     hugo
@@ -94,10 +91,12 @@
     obs-studio
     pavucontrol
     playerctl
+    poetry
     python311Full
-    python311Packages.pip
     python311Packages.python-lsp-server
+    python311Packages.stdenv
     qbittorrent
+    stdenv.cc.cc.lib
     slurp
     spotify
     texliveFull
@@ -109,6 +108,7 @@
     ventoy
     wget
     wineWowPackages.waylandFull
+    zlib
   ];
 
   fonts.packages = with pkgs; [
@@ -120,31 +120,6 @@
     meslo-lgs-nf
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # General programs that need to be enabled
-  programs = {
-    zsh.enable = true;
-
-    steam.enable = true;
-    
-    thunar = {
-      enable = true;
-
-      plugins = with pkgs.xfce; [
-        thunar-archive-plugin
-        thunar-media-tags-plugin
-        thunar-volman
-      ];
-    };
-
-  };
   # Env settings
 
   environment.sessionVariables = {
@@ -159,7 +134,6 @@
   #     name = "Papirus-Dark";
   #     package = pkgs.papirus-icon-theme;
   #   };
-
   #   theme = {
   #     name = "Adwaita-dark";
   #     package = pkgs.gnome.gnome-themes-extra;
@@ -178,11 +152,11 @@
   #   };
   # };
 
-  # qt = {
-  #   enable = true;
-  #   platformTheme = "gnome";
-  #   style = "adwaita-dark";
-  # };
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

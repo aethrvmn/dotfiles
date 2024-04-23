@@ -9,38 +9,22 @@
       xkb.layout = "us";
       wacom.enable = true;
 
-    # This is broken and I am not smart enough to fix it
-      displayManager = {
-         sddm={
-          enable = true;
-          wayland.enable = true;
-        };
-        
-        
-        # session = [{
-          # manage = "desktop";
-          # name = "labwc";
-          # start = ''exec labwc'';
-        # }];
-      };
-      desktopManager.plasma5.enable = true;
-      # desktopManager.gnome.enable = true;
     };
 
     printing.enable = true;
     gvfs.enable = true;
     tumbler.enable = true;
 
-    # greetd = {
-      # enable = true;
+    greetd = {
+      enable = true;
 
-      # settings = {
-        # default_session={
-          # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu -r -t -i --asterisks";
-          # user = "greeter";
-        # };
-      # };
-    # };
+      settings = {
+        default_session={
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu -r -t -i --asterisks";
+          user = "greeter";
+        };
+      };
+    };
 
     pipewire = {
       enable = true;
