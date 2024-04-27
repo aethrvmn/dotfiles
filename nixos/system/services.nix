@@ -20,7 +20,7 @@
 
       settings = {
         default_session={
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu -r -t -i --asterisks";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu -r -t -i --asterisks --cmd labwc";
           user = "greeter";
         };
       };

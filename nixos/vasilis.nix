@@ -6,15 +6,17 @@
       ./home-manager/alacritty.nix
       ./home-manager/dots.nix
       ./home-manager/git.nix
+      ./home-manager/gtk.nix
       ./home-manager/helix.nix
       ./home-manager/mako.nix
       ./home-manager/waybar.nix
       ./home-manager/zsh.nix
-        ];
+    ];
   
   home.username = "valapeos";
   home.homeDirectory = "/home/valapeos";
   home.stateVersion = "23.11";
+  home.sessionVariables.GTK_THEME = "Adwaita-dark";
   
   home.packages = with pkgs; [
     _1password-gui
@@ -40,20 +42,27 @@
     vesktop
     whatsapp-for-linux
     wlr-randr
+    xfce.xfce4-settings
     zotero
     zsh-powerlevel10k
   ];
 
-  gtk = {
-    enable = true;
+  # gtk = {
 
-    gtk3.extraConfig = {
-        gtk-application-prefer-dark-theme=1;
-      };
+    
+  #   enable = true;
 
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme=1;
-    };
+  #   gtk3.extraConfig = {
+  #     gtk-application-prefer-dark-theme=1;
+  #   };
+
+  #   gtk4.extraConfig = {
+  #     gtk-application-prefer-dark-theme=1;
+  #   };
   
-  };
+  #   theme = {
+  #     name = "Adwaita-dark";
+  #     package = pkgs.gnome.gnome-themes-extra;
+  #   };
+  # };
 }

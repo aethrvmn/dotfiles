@@ -18,54 +18,49 @@
       ./system/network.nix
       ./system/programs.nix
       ./system/services.nix
-      # ./system/index-db.nix
     ];
 
-  security.polkit.enable = true;
-  security.rtkit.enable = true;
-
-  networking.hostName = "valanixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  security = {
+    polkit.enable = true;
+    rtkit.enable = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Rome";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "el_GR.UTF-8";
-    LC_IDENTIFICATION = "el_GR.UTF-8";
-    LC_MEASUREMENT = "el_GR.UTF-8";
-    LC_MONETARY = "el_GR.UTF-8";
-    LC_NAME = "el_GR.UTF-8";
-    LC_NUMERIC = "el_GR.UTF-8";
-    LC_PAPER = "el_GR.UTF-8";
-    LC_TELEPHONE = "el_GR.UTF-8";
-    LC_TIME = "el_GR.UTF-8";
+    extraLocaleSettings = {
+      LC_ADDRESS = "el_GR.UTF-8";
+      LC_IDENTIFICATION = "el_GR.UTF-8";
+      LC_MEASUREMENT = "el_GR.UTF-8";
+      LC_MONETARY = "el_GR.UTF-8";
+      LC_NAME = "el_GR.UTF-8";
+      LC_NUMERIC = "el_GR.UTF-8";
+      LC_PAPER = "el_GR.UTF-8";
+      LC_TELEPHONE = "el_GR.UTF-8";
+      LC_TIME = "el_GR.UTF-8";
+    };
   };
 
- # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.valapeos = {
-    isNormalUser = true;
-    description = "Vasilis";
-    password = "gang";
-    extraGroups = [ "networkmanager" "wheel" ];
+  users = {
+    defaultUserShell = pkgs.zsh;  
+
+    # Define a user account. Don't forget to set a password with ‘passwd’.
+    users.valapeos = {
+      isNormalUser = true;
+      description = "Vasilis";
+      password = "gang";
+      extraGroups = [ "networkmanager" "wheel" ];
+    };
   };
-
-  users.defaultUserShell = pkgs.zsh;
-
+  
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.valapeos = import ./vp.nix;
+    users.valapeos = import ./vasilis.nix;
   };
   
   # Allow unfree packages
@@ -93,7 +88,6 @@
     playerctl
     poetry
     python311Full
-    python311Packages.python-lsp-server
     python311Packages.stdenv
     qbittorrent
     stdenv.cc.cc.lib
@@ -111,6 +105,7 @@
     zlib
   ];
 
+  # Fonts
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk
@@ -121,36 +116,9 @@
   ];
 
   # Env settings
-
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
-
-
-  # gtk = {
-  #   enable = true;
-
-  #   iconTheme = {
-  #     name = "Papirus-Dark";
-  #     package = pkgs.papirus-icon-theme;
-  #   };
-  #   theme = {
-  #     name = "Adwaita-dark";
-  #     package = pkgs.gnome.gnome-themes-extra;
-  #   };
-
-  #   gtk3.extraConfig = {
-  #     Settings = ''
-  #       gtk-application-prefer-dark-theme=1
-  #     '';
-  #   };
-
-  #   gtk4.extraConfig = {
-  #     Settings = ''
-  #       gtk-application-prefer-dark-theme=1
-  #     '';
-  #   };
-  # };
 
   qt = {
     enable = true;

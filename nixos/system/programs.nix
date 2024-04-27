@@ -2,8 +2,6 @@
 
 {
   programs = {
-    chromium.enable = true;
-   
     firefox.enable = true;
 
     file-roller.enable = true;
@@ -30,8 +28,6 @@
       ];
     };
    
-    waybar.enable = true;
-
     zsh.enable = true;
     
     # Some programs need SUID wrappers, can be configured further or are
