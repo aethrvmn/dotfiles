@@ -1,10 +1,10 @@
-# Set background image.
-swww-daemon &
-
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
 kanshi >/dev/null 2>&1 &
 xrandr --output DP-1 --primary &
+
+# Set background image.
+swww-daemon &
 
 # Launch a panel such as yambar or waybar.
 waybar >/dev/null 2>&1 &

@@ -18,6 +18,7 @@
       ./system/network.nix
       ./system/programs.nix
       ./system/services.nix
+      ./system/systemd.nix
     ];
 
   security = {

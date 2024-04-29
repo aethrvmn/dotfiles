@@ -13,10 +13,10 @@
   gtk = {
     enable = true;
 
-    theme = {
-      name = "adwaita-dark";
-      package = pkgs.gnome.gnome-themes-extra;
-    };
+    # theme = {
+    #   name = "adwaita-dark";
+    #   package = pkgs.gnome.gnome-themes-extra;
+    # };
 
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;

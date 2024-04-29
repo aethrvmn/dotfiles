@@ -8,6 +8,7 @@
       ./home-manager/git.nix
       ./home-manager/gtk.nix
       ./home-manager/helix.nix
+      ./home-manager/kanshi.nix
       ./home-manager/mako.nix
       ./home-manager/waybar.nix
       ./home-manager/zsh.nix
@@ -29,6 +30,7 @@
     helix
     imv
     j4-dmenu-desktop
+    kanshi
     labwc-tweaks
     lutris
     mpd

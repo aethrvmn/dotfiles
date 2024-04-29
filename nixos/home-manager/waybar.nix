@@ -59,7 +59,7 @@
         };
 
         "custom/workspaces" = {
-          exec = "~/dotfiles/.config/waybar/scripts/workspaces";
+          exec = "~/dotfiles/scripts/workspaces";
         };
       };
     };
