@@ -24,6 +24,7 @@
     bemenu
     btop
     cowsay
+    fastfetch
     filezilla
     git
     grim
@@ -35,7 +36,6 @@
     lutris
     mpd
     mpv
-    neofetch
     slurp
     swappy
     swww

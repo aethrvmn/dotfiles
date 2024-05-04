@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # <config>
-NUMBER=8
+NUMBER=4
 SYMBOL_CURRENT="  "
 SYMBOL_OTHER="  "
 PIPE=/tmp/workspace

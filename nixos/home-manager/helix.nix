@@ -76,6 +76,10 @@
       };
     };
 
+    nimlangserver = {
+      command = "${nimlangserver}/bin/nimlangserver";
+    };
+
     language =
       let
         jsTsWebLanguageServers = [
@@ -88,12 +92,7 @@
           file-types = [ "lalrpop" "rs" ]; 
           language-servers = [ "rust-analyzer" ]; 
         }
-
-        {
-          name = "python"; 
-          language-servers = ["pylsp"];
-        }
-      
+             
         { 
           name = "typescript"; 
           language-servers = jsTsWebLanguageServers; 
@@ -117,11 +116,6 @@
         { 
           name = "sql"; 
           formatter.command = "pg_format"; 
-        }
-
-        { 
-          name = "nix"; 
-          language-servers = [ "nil" ]; 
         }
 
         { 

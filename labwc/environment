@@ -27,7 +27,7 @@ XCURSOR_SIZE=24
 
 
 ## BEMENU stuff
-BEMENU_OPTS= -n -i --tb "#1a1a1a" --tf "#268bd2" --fb "#1a1a1a" --nb "#1a1a1a" --ab "#1a1a1a" --hb "#1a1a1a" --hf "#268bd2" --line-height 30 "$@" --center --wrap --ignorecase --prompt '>' --list 12 --no-overlap --width-factor 0.5 --fn 'MesloLGS NF'
+BEMENU_OPTS= -n -i --tb "#2D2A2E" --tf "#AC9C6D" --fb "#2D2A2E" --nb "#2D2A2E" --ab "#2D2A2E" --hb "#2D2A2E" --hf "#AC9C6D" --line-height 30 "$@" --center --wrap --ignorecase --prompt '>' --list 12 --no-overlap --width-factor 0.5 --fn 'MesloLGS NF'
 
 
 BEMENU_BACKEND=wayland

@@ -83,7 +83,9 @@
     greetd.tuigreet
     helix
     hugo
+    jitsi
     localsend
+    nim
     obs-studio
     pavucontrol
     playerctl
