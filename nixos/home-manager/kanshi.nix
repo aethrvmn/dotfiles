@@ -11,7 +11,7 @@
         outputs = [
           {
             criteria = "DP-1";
-            position = "1080,500";
+            position = "1080,550";
             mode = "1920x1080@120Hz";
             adaptiveSync = true;
           }
@@ -24,7 +24,7 @@
           }        
           {
             criteria = "HDMI-A-1";
-            position = "3000,500";
+            position = "3000,550";
             mode = "1920x1080@60Hz";
           }
         ];

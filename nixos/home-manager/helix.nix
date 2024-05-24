@@ -60,24 +60,9 @@
 
       ltex-ls.command = "${ltex-ls}/bin/ltex-ls";
 
-      rust-analyzer = {
-        command = "${rust-analyzer}/bin/rust-analyzer";
-        config.rust-analyzer = {
-          cargo.loadOutDirsFromCheck = true;
-          checkOnSave.command = "clippy";
-          procMacro.enable = true;
-          lens = { 
-            references = true; 
-            methodReferences = true; 
-          };
-          completion.autoimport.enable = true;
-          experimental.procAttrMacros = true;
-        };
-      };
-    };
+      r.command = "${R}/bin/R";
 
-    nimlangserver = {
-      command = "${nimlangserver}/bin/nimlangserver";
+      nimlangserver.command = "${nimlangserver}/bin/nimlangserver";
     };
 
     language =
@@ -85,14 +70,7 @@
         jsTsWebLanguageServers = [
           "typescript-language-server" 
         ];
-      in [
-        { 
-          name = "rust"; 
-          auto-format = false; 
-          file-types = [ "lalrpop" "rs" ]; 
-          language-servers = [ "rust-analyzer" ]; 
-        }
-             
+      in [ 
         { 
           name = "typescript"; 
           language-servers = jsTsWebLanguageServers; 
@@ -143,7 +121,6 @@
 
         {
           name = "xml";
-          auto-format = true;
           file-types = [ "xml" ];
           formatter = {
             command = "${pkgs.yq-go}/bin/yq";

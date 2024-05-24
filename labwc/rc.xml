@@ -151,11 +151,11 @@ your favourite terminal or application launcher. See rc.xml for an example.
       <action name="SendToDesktop" to="4"></action>
       <action name="Execute" command="bash -c &#39;echo 4 &gt; /tmp/workspace&#39;"></action>
     </keybind>
-    <keybind key="W-C-Left">
+    <keybind key="W-S-Left">
       <action name="GoToDesktop" to="left"></action>
       <action name="Execute" command="bash -c &#39;echo left &gt; /tmp/workspace&#39;"></action>
     </keybind>
-    <keybind key="W-C-Right">
+    <keybind key="W-S-Right">
       <action name="GoToDesktop" to="right"></action>
       <action name="Execute" command="bash -c &#39;echo right &gt; /tmp/workspace&#39;"></action>
     </keybind>
@@ -178,20 +178,14 @@ your favourite terminal or application launcher. See rc.xml for an example.
       <action name="Raise"></action>
     </keybind>
     <keybind key="W-Up">
-      <action name="SnapToEdge" direction="up"></action>
+      <action name="ToggleMaximize"></action>
       <action name="Focus"></action>
       <action name="Raise"></action>
     </keybind>
     <keybind key="W-Down">
-      <action name="SnapToEdge" direction="down"></action>
+      <action name="SnapToRegion" region="center"></action>
       <action name="Focus"></action>
       <action name="Raise"></action>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="ToggleMaximize"></action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="SnapToRegion" region="center"></action>
     </keybind>
     <keybind key="W-A-C-Right">
       <action name="SnapToRegion" region="top-right"></action>

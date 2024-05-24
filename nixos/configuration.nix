@@ -19,6 +19,7 @@
       ./system/programs.nix
       ./system/services.nix
       ./system/systemd.nix
+      ./system/labwc.nix
     ];
 
   security = {
@@ -79,6 +80,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     bash
+    dotnetCorePackages.sdk_9_0
     gcc
     greetd.tuigreet
     helix
@@ -120,6 +122,7 @@
 
   # Env settings
   environment.sessionVariables = {
+    DOTNET_ROOT = "${pkgs.dotnet-sdk}";
     NIXOS_OZONE_WL = "1";
   };
 

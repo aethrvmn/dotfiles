@@ -9,7 +9,7 @@
       window = {
         padding.x = 10;
         padding.y = 10;
-        decorations = "None";
+        # decorations = "None";
         opacity = 0.95; #Until blur is an option
         blur = true;
         dimensions.columns = 80;

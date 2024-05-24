@@ -27,6 +27,7 @@
     fastfetch
     filezilla
     git
+    godot_4
     grim
     helix
     imv

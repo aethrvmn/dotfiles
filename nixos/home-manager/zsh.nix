@@ -61,7 +61,11 @@
       }
     ];
     
-    initExtra = "source ~/.p10k.zsh";
+    initExtra = ''
+      source ~/.p10k.zsh
+      eval $(ssh-agent)
+      clear
+    '';
     
   };
 
