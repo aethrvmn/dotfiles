@@ -84,10 +84,7 @@ your favourite terminal or application launcher. See rc.xml for an example.
     <keybind key="W-r">
       <action name="Reconfigure"></action>
     </keybind>
-    <keybind key="F3">
-      <action name="Execute" command="grim"></action>
-    </keybind>
-    <keybind key="F4">
+    <keybind key="Print">
       <action name="Execute">
         <command>sh -c &#39;grim -g &#34;$(slurp)&#34; - | swappy -f -&#39;</command>
       </action>

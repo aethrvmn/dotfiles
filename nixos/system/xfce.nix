@@ -9,9 +9,9 @@
       xfce.enable=true;
     };
 
-    displayManager={
-      lightdm.enable=true;
-      defaultSession="xfce";
-    };
+    # displayManager={
+    #   lightdm.enable=true;
+    #   defaultSession="xfce";
+    # };
   };
 }

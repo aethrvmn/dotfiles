@@ -20,6 +20,7 @@
       ./system/services.nix
       ./system/systemd.nix
       ./system/labwc.nix
+      ./system/xfce.nix
     ];
 
   security = {
@@ -80,6 +81,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     bash
+    devenv
     dotnetCorePackages.sdk_9_0
     gcc
     greetd.tuigreet
@@ -107,6 +109,7 @@
     ventoy
     wget
     wineWowPackages.waylandFull
+    xarchiver
     zlib
   ];
 

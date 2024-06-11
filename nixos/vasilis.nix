@@ -21,8 +21,10 @@
   
   home.packages = with pkgs; [
     _1password-gui
+    audacity
     bemenu
     btop
+    czkawka
     cowsay
     fastfetch
     filezilla
