@@ -96,12 +96,14 @@
     poetry
     python311Full
     python311Packages.stdenv
+    python311Packages.tkinter
     qbittorrent
     stdenv.cc.cc.lib
     slurp
     spotify
     texliveFull
     thunderbird
+    tk
     udisks
     linuxPackages.v4l2loopback
     usbutils
