@@ -18,9 +18,9 @@ mako >/dev/null 2>&1 &
 thunar --daemon &
 
 # Deploy swww wallpapers
-swww img -o HDMI-A-1 ~/dotfiles/wallpapers/hobbits.jpg &
-swww img -o DP-2 ~/dotfiles/wallpapers/bluemana.png &
-swww img -o DP-1 ~/dotfiles/wallpapers/statues.jpg &
+swww img -o HDMI-A-1 ~/Pictures/wallpapers/labwc/hobbits.jpg &
+swww img -o DP-2 ~/Pictures/wallpapers/labwc/bluemana.png &
+swww img -o DP-1 ~/Pictures/wallpapers/labwc/statues.jpg &
 
 # Define custom programs to start
 
@@ -29,13 +29,13 @@ spotify &
 
 ## Chat clients
 ### Discord
-vesktop &
+# vesktop &
 
 ### Telegram
-telegram-desktop &
+# telegram-desktop &
 
 ### Whatsapp
-whatsapp-for-linux &
+# whatsapp-for-linux &
 
 ### Mail
-thunderbird &
+# thunderbird &
