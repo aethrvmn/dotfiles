@@ -17,11 +17,7 @@ mako >/dev/null 2>&1 &
 # Start the Thunar daemon for better startup
 thunar --daemon &
 ## Set dark theme
-xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s 'MesloLGS NF Regular 12'
-xfconf-query -c xsettings -p /Gtk/FontName -s 'Noto Sans 12'
-xfconf-query -c xsettings -p /Gtk/CursorThemeName -s default
-xfconf-query -c xsettings -p /Net/IconThemeName -s GNOME
-xfconf-query -c xsettings -p /Net/ThemeName -s Adwaita-dark
+sh ~/.themes/orzhovtheme.sh
 
 
 # Deploy swww wallpapers
