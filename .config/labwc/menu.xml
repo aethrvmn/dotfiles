@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_menu>
-  <menu id="root-menu" label="root-menu">
-    <title label="Main Menu"></title>
-    <separator></separator>
-    <item label="Steam" icon="steam">
-      <action name="Execute">
-        <command>steam</command>
-      </action>
-    </item>
-    <item label="Lutris" icon="lutris">
-      <action name="Execute">
-        <command>lutris</command>
-      </action>
-    </item>
-    
-    <separator></separator>
-    
-    <item label="Emby Theater" icon="emby-theater">
-      <action name="Execute">
-        <command>emby-theater</command>
-      </action>
-    </item>
-    <item label="LocalSend" icon="localsend">
-      <action name="Execute">
-        <command>localsend</command>
-      </action>
-    </item>
-    <separator></separator>  
+  <menu label="root-menu" id="root-menu">
+    <separator/>
   </menu>
-  
-  <menu label="sys-menu" id="sys-menu">
+
+   <menu label="sys-menu" id="sys-menu">
     <item label="Reconfigure">
       <action name="Reconfigure"></action>
     </item>

@@ -25,6 +25,8 @@ _darcs
 # custom
 ^/.DS_Store
 ^/.nix
-scripts/
-wallpapers/
-desktop.png
+
+\nixos
+\scripts
+\wallpapers
+\desktop.png

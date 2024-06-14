@@ -7,7 +7,7 @@ decorations = 'None'
 padding = { x = 10, y = 10 }
 
 [font]
-size = 15
+size = 12
 
 [font.normal]
 family = "MesloLGS NF"
