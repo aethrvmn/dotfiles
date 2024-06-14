@@ -16,6 +16,13 @@ mako >/dev/null 2>&1 &
 
 # Start the Thunar daemon for better startup
 thunar --daemon &
+## Set dark theme
+xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s 'MesloLGS NF Regular 12'
+xfconf-query -c xsettings -p /Gtk/FontName -s 'Noto Sans 12'
+xfconf-query -c xsettings -p /Gtk/CursorThemeName -s default
+xfconf-query -c xsettings -p /Net/IconThemeName -s GNOME
+xfconf-query -c xsettings -p /Net/ThemeName -s Adwaita-dark
+
 
 # Deploy swww wallpapers
 swww img -o HDMI-A-1 ~/Pictures/wallpapers/labwc/hobbits.jpg &
@@ -23,19 +30,3 @@ swww img -o DP-2 ~/Pictures/wallpapers/labwc/bluemana.png &
 swww img -o DP-1 ~/Pictures/wallpapers/labwc/statues.jpg &
 
 # Define custom programs to start
-
-## Music client
-spotify &
-
-## Chat clients
-### Discord
-# vesktop &
-
-### Telegram
-# telegram-desktop &
-
-### Whatsapp
-# whatsapp-for-linux &
-
-### Mail
-# thunderbird &

@@ -43,6 +43,9 @@ alias ls="eza --icons=always --color=always"
 alias ll="eza -a --color=always --long -tree --icons=always --no-time --no-user"
 alias sys-update="sudo dnf update && flatpak update"
 alias cat="bat"
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 . "$HOME/.atuin/bin/env"
 
