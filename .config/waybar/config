@@ -4,19 +4,41 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "reload_style_on_change": true,
     "spacing": 0, 
-    // "exclusive": false,
-    "margin": 5,    
+    "margin": 5,
 
     // Choose the order of the modules
-    // "modules-left": ["custom/workspaces"],
+    "modules-left": ["custom/media"],
 
-    "modules-center": ["clock"],
+    "modules-center": ["clock", "custom/weather"],
 
-    "modules-right": ["tray"],
+    "modules-right": ["cava", "tray"],
 
 
     // Modules configuration
 
+    "cava": {
+        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+    
     "clock": {
         "format": "{:%R, %b %d}",
         "timezone": "Europe/Rome",
@@ -24,13 +46,13 @@
         "calendar": {
             "mode": "year",
             "mode-mon-col": 4,
-      		"format": {
-      			"months":     "<span color='#ffead3'><b>{}</b></span>",
-      			"days":       "<span color='#ecc6d9'><b>{}</b></span>",
-      			"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-      			"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-      			"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-      		}
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
         },
         "on-click": "thunderbird"
     },
@@ -38,6 +60,30 @@
     "tray": {
         "icon-size": 18,
         "spacing": 10,
-    	"show-passive-items": true,
+        "align": 1,
+        "justify": "right",
+        "show-passive-items": true,
     },
+    
+    "custom/weather": {
+        "exec": "bash ~/.config/waybar/wittr.sh",
+        "return-type": "json",
+        "format": "{}",
+        "spacing": 10,
+        "tooltip": true,
+        "interval": 900
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "escape": true,
+        "return-type": "json",
+        "max-length": 40,
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
+        "smooth-scrolling-threshold": 10,
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",     
+    }
 }  

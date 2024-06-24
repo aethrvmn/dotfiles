@@ -1,20 +1,7 @@
-# Initialize profile variables
-XFCE_RC_ENABLE="false"
-LABWC_RC_ENABLE="false"
-
-# Detect the terminal emulator
-if [[ "$TERM" == "xterm-256color" ]]; then
-  XFCE_RC_ENABLE="true"
-elif [[ "$TERM" == "alacritty" ]]; then
-  LABWC_RC_ENABLE="true"
-fi
-
 # Source the appropriate profile based on the enabled variable
-if [[ "$XFCE_RC_ENABLE" == "true" ]]; then
+if [[ "$TERM" == "xterm-256color" ]]; then
   source "$HOME/.zsh/profiles/xfce-zshrc"
-fi
-
-if [[ "$LABWC_RC_ENABLE" == "true" ]]; then
+else
   source "$HOME/.zsh/profiles/labwc-zshrc"
 fi
 
@@ -25,6 +12,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 HISTFILE=~/.zsh/histfile
 HISTSIZE=10000
 SAVEHIST=1000
+export HISTFILE
 
 # misc config
 setopt autocd beep
@@ -50,8 +38,9 @@ alias mv='mv -i'
 . "$HOME/.atuin/bin/env"
 
 # evals
+eval $(ssh-agent -s)
 eval "$(atuin init zsh)"
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias fk)"
 
-export HISTFILE
+clear

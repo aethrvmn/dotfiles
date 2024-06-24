@@ -1,0 +1,17 @@
+// Glory to the Orzhov Guild
+
+themes {
+orzhov{
+        fg "#BEBCAE"
+        bg "#2D2A2E"
+        black "#2c2525"
+        red "#fd6883"
+        green "#adda78"
+        yellow "#f9cc6c"
+        blue "#f38d70"
+        magenta "#a8a9eb"
+        cyan "#85dacc"
+        white "#f7f6f3"
+        orange "#D08770"
+    }
+}

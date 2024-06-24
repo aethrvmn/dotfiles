@@ -1,0 +1,21 @@
+[font]
+size = 11
+
+[font.normal]
+family = "Meslo LGS NF"
+style = "Regular"
+
+[font.bold]
+family = "Meslo LGS NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "Meslo LGS NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "Meslo LGS NF"
+style = "Italic"
+
+[cursor.style]
+shape = "Underline"

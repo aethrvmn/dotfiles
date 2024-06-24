@@ -26,3 +26,4 @@ swww img -o DP-2 ~/Pictures/wallpapers/labwc/bluemana.png &
 swww img -o DP-1 ~/Pictures/wallpapers/labwc/statues.jpg &
 
 # Define custom programs to start
+eval "$(ssh-agent)"

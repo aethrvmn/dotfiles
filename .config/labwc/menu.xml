@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_menu>
   <menu label="root-menu" id="root-menu">
-    <separator/>
+    <item label="." />
   </menu>
 
    <menu label="sys-menu" id="sys-menu">
