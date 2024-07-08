@@ -14,6 +14,11 @@ HISTSIZE=10000
 SAVEHIST=1000
 export HISTFILE
 
+# keybinds because zsh treats keys weirdly
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+
 # misc config
 setopt autocd beep
 unsetopt extendedglob nomatch
@@ -38,9 +43,7 @@ alias mv='mv -i'
 . "$HOME/.atuin/bin/env"
 
 # evals
-eval $(ssh-agent -s)
+eval "$(ssh-agent -s)"
 eval "$(atuin init zsh)"
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias fk)"
-
-clear
