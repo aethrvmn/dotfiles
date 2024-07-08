@@ -1,6 +1,6 @@
-# Configure output directives such as mode, position, scale and transform.
-# Use wlr-randr to get your output names
+# Configure output directives such as mode, position, scale and transform using kanshi.
 kanshi >/dev/null 2>&1 &
+# Use xrandr for x-wayland
 xrandr --output DP-1 --primary &
 
 # Set background image.
@@ -21,8 +21,8 @@ sh ~/.themes/orzhovtheme.sh
 
 
 # Deploy swww wallpapers
-swww img -o HDMI-A-1 ~/Pictures/wallpapers/labwc/hobbits.jpg &
-swww img -o DP-2 ~/Pictures/wallpapers/labwc/bluemana.png &
+swww img -o DP-2 ~/Pictures/wallpapers/labwc/hobbits.jpg &
+swww img -o HDMI-A-1 ~/Pictures/wallpapers/labwc/bluemana.png &
 swww img -o DP-1 ~/Pictures/wallpapers/labwc/statues.jpg &
 
 # Define custom programs to start
