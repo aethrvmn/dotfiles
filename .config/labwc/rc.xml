@@ -102,7 +102,7 @@ your favourite terminal or application launcher. See rc.xml for an example.
       <action name="Execute" command="firefox --private-window"></action>
     </keybind>
     <keybind key="W-space">
-      <action name="Execute" command="j4-dmenu-desktop --dmenu=&#39;bemenu&#39;"></action>
+      <action name="Execute" command="j4-dmenu-desktop --dmenu=bemenu"></action>
     </keybind>
     <keybind key="W-s">
       <action name="Execute" command="spotify"></action>

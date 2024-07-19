@@ -5,8 +5,11 @@ else
   source "$HOME/.zsh/profiles/labwc-zshrc"
 fi
 
-# autosuggestions location
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# ZSH autosuggest
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# ZSH syntax hghlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # history files
 HISTFILE=~/.zsh/histfile
@@ -34,16 +37,18 @@ compinit
 # aliases
 alias ls="eza --icons=always --color=always"
 alias ll="eza -a --color=always --long -tree --icons=always --no-time --no-user"
-alias sys-update="sudo dnf update && flatpak update"
 alias cat="bat"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias hx='helix'
 
-. "$HOME/.atuin/bin/env"
+# . "$HOME/.atuin/bin/env"
 
 # evals
 eval "$(ssh-agent -s)"
 eval "$(atuin init zsh)"
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias fk)"
+
+clear
