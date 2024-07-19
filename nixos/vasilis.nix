@@ -10,12 +10,13 @@
       ./home-manager/helix.nix
       ./home-manager/kanshi.nix
       ./home-manager/mako.nix
+      ./home-manager/ohmyposh.nix
       ./home-manager/waybar.nix
       ./home-manager/zsh.nix
     ];
   
-  home.username = "valapeos";
-  home.homeDirectory = "/home/valapeos";
+  home.username = "aethrvmn";
+  home.homeDirectory = "/home/aethrvmn";
   home.stateVersion = "23.11";
   home.sessionVariables.GTK_THEME = "Adwaita-dark";
   
@@ -43,12 +44,9 @@
     swappy
     swww
     telegram-desktop
-    texstudio
-    vesktop
-    whatsapp-for-linux
     wlr-randr
+    xfce.mousepad
     xfce.xfce4-settings
     zotero
-    zsh-powerlevel10k
   ];
 }

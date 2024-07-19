@@ -31,5 +31,4 @@
     TTYVHangup = true;
     TTYVTDisallocate = true;
   };
-
 }

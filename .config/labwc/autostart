@@ -1,5 +1,6 @@
 # Configure output directives such as mode, position, scale and transform using kanshi.
 kanshi >/dev/null 2>&1 &
+
 # Use xrandr for x-wayland
 xrandr --output DP-1 --primary &
 
@@ -16,11 +17,13 @@ mako >/dev/null 2>&1 &
 
 # Start the Thunar daemon for better startup
 thunar --daemon &
+
 ## Set dark theme
-sh ~/.themes/orzhovtheme.sh
+sh ~/.themes/orzhovtheme.sh &
 
 
 # Deploy swww wallpapers
-swww img -o HDMI-A-1 ~/Pictures/wallpapers/labwc/hobbits.jpg &
-swww img -o DP-1 ~/Pictures/wallpapers/labwc/statues.jpg &
-
+swww img -o HDMI-A-1 ~/.dotfiles/wallpapers/hobbits.jpg &
+swww img -o DP-1 ~/.dotfiles/wallpapers/statues.jpg &
+swww img -o DP-2 ~/.dotfiles/wallpapers/bluemana.png &
+swww img -o eDP-1 ~/.dotfiles/wallpapers/tree.jpg &

@@ -52,7 +52,7 @@
     defaultUserShell = pkgs.zsh;  
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.valapeos = {
+    users.aethrvmn = {
       isNormalUser = true;
       description = "Vasilis";
       password = "gang";
@@ -63,7 +63,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.valapeos = import ./vasilis.nix;
+    users.aethrvmn = import ./vasilis.nix;
   };
   
   # Allow unfree packages
@@ -80,9 +80,13 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    alsa-utils
     bash
+    brightnessctl
+    cava
     devenv
     dotnetCorePackages.sdk_9_0
+    eza
     gcc
     greetd.tuigreet
     helix
@@ -101,7 +105,6 @@
     stdenv.cc.cc.lib
     slurp
     spotify
-    texliveFull
     thunderbird
     tk
     udisks

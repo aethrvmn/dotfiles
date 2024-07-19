@@ -3,12 +3,12 @@
 {
   services.kanshi = {
     enable = true;
-
     systemdTarget="";
 
-    profiles = {
-      home_office = {
-        outputs = [
+    settings = [
+      {
+        profile.name = "home_office";
+        profile.outputs = [
           {
             criteria = "DP-1";
             position = "1080,550";
@@ -28,12 +28,17 @@
             mode = "1920x1080@60Hz";
           }
         ];
-      };
-      # laptop = {
-      #   outputs = [
-          
-      #   ];
-      # };
-    };
+      }
+
+      {
+        profile.name = "laptop";
+        profile.outputs =[
+          {
+            criteria = "eDP-1";
+            mode = "1920x1080";
+          }          
+        ];
+      }
+    ];
   };
 }

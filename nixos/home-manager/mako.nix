@@ -6,7 +6,7 @@
 
     layer = "top";
 
-    output = "DP-1";
+    output = "DP-1, eDP-1";
 
     backgroundColor = "#4A5152";
 
