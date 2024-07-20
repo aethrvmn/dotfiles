@@ -44,6 +44,7 @@
     swappy
     swww
     telegram-desktop
+    waybar-mpris
     wlr-randr
     xfce.mousepad
     xfce.xfce4-settings

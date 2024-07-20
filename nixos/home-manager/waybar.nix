@@ -1,4 +1,4 @@
-{config, ...}:
+{config, pkgs, ...}:
 
 {
   programs.waybar = {
@@ -24,6 +24,7 @@
         
         modules-left = [
           "custom/media"
+          "pulseaudio"
           # "cava"
         ];
 
@@ -38,28 +39,37 @@
         ];
 
         # Modules Configuration
-        # "cava" = {
-        #   cava_config = "$HOME/cava/cava.conf";
-        #   framerate = 30;
-        #   autosens = 1;
-        #   sensitivity = 100;
-        #   bars = 14;
-        #   lower_cutoff_freq = 50;
-        #   higher_cutoff_freq = 10000;
-        #   method = "pulse";
-        #   source = "auto";
-        #   stereo = true;
-        #   reverse = false;
-        #   bar_delimiter = 0;
-        #   monstercat = false;
-        #   waves = false;
-        #   noise_reduction = 0.77;
-        #   input_delay = 2;
-        #   format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
-        #   actions = {
-        #     on-click-right = "mode";
-        #   };
-        # };
+        "battery" = {
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "{icon} {capacity}%";
+          format-charging = "CH {capacity}%";
+        };
+
+        "cava" = {
+          # cava_config = "$HOME/.config/cava/cava.conf";
+          framerate = 30;
+          autosens = 1;
+          sensitivity = 100;
+          bars = 14;
+          lower_cutoff_freq = 50;
+          higher_cutoff_freq = 10000;
+          method = "pulse";
+          source = "auto";
+          stereo = true;
+          reverse = false;
+          bar_delimiter = 0;
+          monstercat = false;
+          waves = false;
+          noise_reduction = 0.77;
+          input_delay = 2;
+          format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+          actions = {
+            on-click-right = "mode";
+          };
+        };
         
         "clock" = {
           format = "{:%R %b %d}";
@@ -79,23 +89,36 @@
           on-click = "thunderbird";
         };
 
+        "pulseaudio" = {
+        	format = "{volume}% {icon}";
+        	format-bluetooth = "{volume}% {icon}";
+        	format-muted = "";
+        	format-icons = {
+        		headphones = "";
+        		handsfree = "";
+        		headset = "";
+        		phone = "";
+        		phone-muted = "";
+        		portable = "";
+        		car = "";
+        		default = ["" ""];
+        	};
+        	scroll-step = 1;
+          on-click = "amixer sset Master toggle";
+        	on-click-right = "pavucontrol";
+        };
+
         "tray" = {
           icon-size = 18;
           spacing = 10;
           show-passive-items = true;
         };
 
-        "battery" = {
-          states = {
-            warning = 30;
-            critical = 15;
-          };
-          format = "{icon} {capacity}%";
-          format-charging = "CH {capacity}%";
-        };
+      
 
+        # Custom Modules
         "custom/weather" = {
-          exec = "$HOME/.dotfiles/scripts/wittr.sh";
+          exec = "sh $HOME/.dotfiles/scripts/wittr.sh";
           return-type = "json";
           format = "{}";
           spacing = 10;
@@ -104,16 +127,10 @@
         };
 
         "custom/media" = {
-          format = "{icon} {}";
-          escape = true;
           return-type = "json";
-          max-length = 40;
-          on-click = "playerctl play-pause";
-          on-click-right = "playerctl stop";
-          smooth-scrolling-threshold = 10;
-          on-scroll-up = "playerctl next";
-          on-scroll-down = "playerctl previous";
-          exec = "$HOME/.dotfiles/scripts/mediaplayer.py 2> /dev/null";     
+          exec = "waybar-mpris --autofocus --order 'SYMBOL:ARTIST:TITLE'";
+          on-click = "waybar-mpris --send toggle";
+          escape = true;
         };
       };
     };
@@ -123,7 +140,7 @@
       # General settings
       * {
         font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-        font-size: 15px;
+        font-size: 14px;
       }
 
       window#waybar {
@@ -132,36 +149,61 @@
         border-radius: 10px;
       }
 
-      #clock,
-      #tray,
       #battery,
+      #cava,
+      #clock,
+      #pulseaudio,
+      #tray,
       #custom-media,
-      #cava {
+      #custom-weather {
         background-color: #4A5152;
-        border-radius: 10px;
-        padding: 5px; 
-      }
-
-      #clock {
-        padding-left: 7px;
-        padding-right: 7px;
-      }
-
-      #tray {
-        padding-right: 5px;
-        padding-left: 5px;
+        padding-top: 1px;
+        padding-bottom: 1px;
       }
 
       #battery {
+        border-radius: 10px 0px 0px 10px;
+        margin-right: 1px;
         padding-right: 5px;
-        padding-left: 5px;
+        padding-left: 10px;
+      }
+
+      #clock {
+        border-radius: 10px 0px 0px 10px;
+        margin-right: 1px;
+        padding-left: 10px;
+        padding-right: 5px;
+      }
+
+      #pulseaudio {
+        border-radius: 0px 10px 10px 0px;
+        margin-left: 1px;
+        min-width: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      #tray {
+        border-radius: 0px 10px 10px 0px;
+        margin-left: 1px;
+        min-width: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
       }
 
       #custom-media{
+        border-radius: 10px 0px 0px 10px;
+        margin-left: 1px;
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 5px;
       }
 
-      ''; 
+      #custom-weather {
+        border-radius: 0px 10px 10px 0px;
+        margin-left: 1px;
+        padding-right: 10px;
+        padding-left: 5px;
+      }
+    ''; 
   };
 }

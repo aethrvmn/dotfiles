@@ -82,13 +82,16 @@
     alacritty
     alsa-utils
     bash
+    bat
     brightnessctl
     cava
     devenv
     dotnetCorePackages.sdk_9_0
     eza
     gcc
+    glib
     greetd.tuigreet
+    gobject-introspection
     helix
     hugo
     jitsi
@@ -101,6 +104,7 @@
     python311Full
     python311Packages.stdenv
     python311Packages.tkinter
+    python311Packages.pygobject3
     qbittorrent
     stdenv.cc.cc.lib
     slurp
