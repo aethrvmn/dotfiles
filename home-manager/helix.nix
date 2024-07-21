@@ -32,7 +32,16 @@
         };         
       };
 
-      keys.input = {
+      keys.normal = {
+        up = "no_op";
+        down = "no_op";
+        left = "no_op";
+        right = "no_op";
+        home = "no_op";
+        end = "no_op";
+      };
+
+      keys.insert= {
         up = "no_op";
         down = "no_op";
         left = "no_op";

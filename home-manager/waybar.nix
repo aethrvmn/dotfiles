@@ -116,7 +116,6 @@
         };
 
       
-
         # Custom Modules
         "custom/weather" = {
           exec = "sh $HOME/.dotfiles/scripts/wittr.sh";

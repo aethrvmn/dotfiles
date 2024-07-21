@@ -22,6 +22,7 @@
   
   home.packages = with pkgs; [
     _1password-gui
+    atuin
     bemenu
     btop
     czkawka
