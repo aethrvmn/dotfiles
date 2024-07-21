@@ -1,5 +1,0 @@
-# oh-my-posh start
-eval "$(oh-my-posh init zsh --config /home/aethrvmn/.config/ohmyposh/clean.toml)"
-
-alias fastfetch='fastfetch -c neofetch.jsonc'
-

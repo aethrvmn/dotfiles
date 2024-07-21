@@ -1,8 +1,0 @@
-# prompt file location
-source $HOME/.zsh/prompt.sh
-
-echo "Microsoft Windows XP [Version 5.1.2600]"
-echo "(C)Copyright 1985-2001 Microsoft Corp."
-echo ""
-
-alias fastfetch="fastfetch -c neofetch.jsonc -l windows"
