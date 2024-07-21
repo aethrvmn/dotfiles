@@ -22,32 +22,38 @@
   
   home.packages = with pkgs; [
     _1password-gui
-    audacity
     bemenu
     btop
     czkawka
     cowsay
+    eza
     fastfetch
     filezilla
     git
     godot_4
     grim
-    helix
+    hugo
     imv
+    jitsi
     j4-dmenu-desktop
     kanshi
     labwc-tweaks
+    localsend
     lutris
     mpd
     mpv
+    obs-studio
+    pavucontrol
+    qbittorrent
     slurp
+    spotify
     swappy
     swww
     telegram-desktop
+    thunderbird
     waybar-mpris
     wlr-randr
     xfce.mousepad
     xfce.xfce4-settings
-    zotero
   ];
 }

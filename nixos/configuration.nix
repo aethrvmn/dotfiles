@@ -66,6 +66,8 @@
     users.aethrvmn = import ./vasilis.nix;
   };
   
+  # Flakes setup
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -81,36 +83,37 @@
   environment.systemPackages = with pkgs; [
     alacritty
     alsa-utils
-    bash
+    # bash
     bat
     brightnessctl
     cava
-    devenv
-    dotnetCorePackages.sdk_9_0
-    eza
+    # devenv
+    # dotnetCorePackages.sdk_9_0
+    # eza
     gcc
     glib
-    greetd.tuigreet
-    gobject-introspection
-    helix
-    hugo
-    jitsi
-    localsend
+    glibc
+    # greetd.tuigreet
+    # gobject-introspection
+    # helix
+    # hugo
+    # jitsi
+    # localsend
     nim
-    obs-studio
-    pavucontrol
+    # obs-studio
+    # pavucontrol
     playerctl
     poetry
     python311Full
     python311Packages.stdenv
-    python311Packages.tkinter
-    python311Packages.pygobject3
-    qbittorrent
-    stdenv.cc.cc.lib
-    slurp
-    spotify
-    thunderbird
-    tk
+    # python311Packages.tkinter
+    # python311Packages.pygobject3
+    # qbittorrent
+    # stdenv.cc.cc.lib
+    # slurp
+    # spotify
+    # thunderbird
+    # tk
     udisks
     linuxPackages.v4l2loopback
     usbutils

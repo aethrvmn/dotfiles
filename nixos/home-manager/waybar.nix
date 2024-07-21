@@ -10,6 +10,7 @@
         reload_style_on_change = true;
 
         output = [
+          "HDMI-A-1"
           "DP-1"
           "eDP-1"
         ];

@@ -19,7 +19,7 @@
         libva
       ];
 
-      setLdLibraryPath = true;
+      # setLdLibraryPath = true;
     };
 
     pulseaudio.enable = false;
