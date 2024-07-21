@@ -9,9 +9,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      # Enable home manager
-      <home-manager/nixos>
-
       # Custom modules
       ./system/boot.nix
       ./system/hardware.nix

@@ -8,7 +8,7 @@
       powerOnBoot = false;
     };
 
-    opengl = {
+    graphics = {
     
       extraPackages = with pkgs; [
         amdvlk

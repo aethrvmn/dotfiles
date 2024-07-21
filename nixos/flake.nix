@@ -7,15 +7,21 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, ... } @ inputs: 
   # let
   #   pkgs = nixpkgs.legacyPackages.x86_64-linux;
   # in
   {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.valanixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.aethrvmn = import ./vasilis.nix;
+        }
       ];
     };
   };
