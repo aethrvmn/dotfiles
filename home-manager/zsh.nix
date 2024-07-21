@@ -17,8 +17,8 @@
     shellAliases = {
 
       # Nix specific
-      nix-update = "sudo cp -r /etc/nixos ~/.dotfiles && sudo nixos-rebuild switch --flake /etc/nixos";
-      nix-config = "sudo -E hx /etc/nixos";
+      nix-update = "sudo nixos-rebuild switch --flake ~/.dotfiles#valanixos";
+      nix-config = "hx ~/.dotfiles";
       
       # Aliases for color options
       ls = "eza --icons=always --color=always";
