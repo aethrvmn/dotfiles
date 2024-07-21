@@ -27,3 +27,6 @@ swww img -o HDMI-A-1 ~/.dotfiles/wallpapers/hobbits.jpg &
 swww img -o DP-1 ~/.dotfiles/wallpapers/statues.jpg &
 swww img -o DP-2 ~/.dotfiles/wallpapers/bluemana.png &
 swww img -o eDP-1 ~/.dotfiles/wallpapers/tree.jpg &
+
+# Custom software
+spotify &
