@@ -15,23 +15,32 @@
         text-width = 200;
 
         statusline = {
-        left = ["mode" "spinner" "separator"];
-        center = ["file-name" "read-only-indicator" "file-modification-indicator" "total-line-numbers"];
-        right = ["separator" "diagnostics" "selections" "register" "position" "file-encoding"];
+          left = ["mode" "spinner" "separator"];
+          center = ["file-name" "read-only-indicator" "file-modification-indicator" "total-line-numbers"];
+          right = ["separator" "diagnostics" "selections" "register" "position" "file-encoding"];
+        };
+
+        file-picker.hidden = true;
+
+        indent-guides.render = true;
+
+        soft-wrap = {
+          enable = true;
+          max-wrap = 25;
+          max-indent-retain = 20;
+          wrap-at-text-width = true;
+        };         
       };
 
-      file-picker.hidden = true;
-
-      indent-guides.render = true;
-
-      soft-wrap = {
-        enable = true;
-        max-wrap = 25;
-        max-indent-retain = 20;
-        wrap-at-text-width = true;
-      };         
+      keys.input = {
+        up = "no_op";
+        down = "no_op";
+        left = "no_op";
+        right = "no_op";
+        home = "no_op";
+        end = "no_op";
+      };
     };
-  };
 
   themes = {
     "monokai_transparent" = {
