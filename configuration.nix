@@ -85,6 +85,7 @@
     brightnessctl
     cava
     # devenv
+    # dejavu-fonts
     # dotnetCorePackages.sdk_9_0
     # eza
     gcc
@@ -124,6 +125,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
+    dejavu_fonts
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji

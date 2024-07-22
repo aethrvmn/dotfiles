@@ -25,8 +25,9 @@
         
         modules-left = [
           "custom/media"
-          "pulseaudio"
+          "custom/sep-small"
           # "cava"
+          "pulseaudio"
         ];
 
         modules-center = [
@@ -35,7 +36,10 @@
         ];
 
         modules-right = [
+          "network"
+          "custom/sep-big"
           "battery"
+          "custom/sep-small"
           "tray"
         ];
 
@@ -90,20 +94,17 @@
           on-click = "thunderbird";
         };
 
+        "network" = {
+          format-wifi = "{essid} 直";
+          format-disconnected = "Off 睊";
+          on-click = "alacritty -e nmtui";
+        };
+
         "pulseaudio" = {
         	format = "{volume}% {icon}";
         	format-bluetooth = "{volume}% {icon}";
         	format-muted = "";
-        	format-icons = {
-        		headphones = "";
-        		handsfree = "";
-        		headset = "";
-        		phone = "";
-        		phone-muted = "";
-        		portable = "";
-        		car = "";
-        		default = ["" ""];
-        	};
+        	format-icons = ["" ""];
         	scroll-step = 1;
           on-click = "amixer sset Master toggle";
         	on-click-right = "pavucontrol";
@@ -117,6 +118,19 @@
 
       
         # Custom Modules
+        "custom/media" = {
+          return-type = "json";
+          exec = "waybar-mpris --autofocus --order 'SYMBOL:ARTIST:TITLE'";
+          on-click = "waybar-mpris --send toggle";
+          escape = true;
+        };
+
+        "custom/sep-big" = {
+        };
+
+        "custom/sep-small" = {
+        };
+
         "custom/weather" = {
           exec = "sh $HOME/.dotfiles/scripts/wittr.sh";
           return-type = "json";
@@ -126,12 +140,6 @@
           interval = 900;
         };
 
-        "custom/media" = {
-          return-type = "json";
-          exec = "waybar-mpris --autofocus --order 'SYMBOL:ARTIST:TITLE'";
-          on-click = "waybar-mpris --send toggle";
-          escape = true;
-        };
       };
     };
 
@@ -154,6 +162,7 @@
       #clock,
       #pulseaudio,
       #tray,
+      #network
       #custom-media,
       #custom-weather {
         background-color: #4A5152;
@@ -163,21 +172,18 @@
 
       #battery {
         border-radius: 10px 0px 0px 10px;
-        margin-right: 1px;
         padding-right: 5px;
         padding-left: 10px;
       }
 
       #clock {
         border-radius: 10px 0px 0px 10px;
-        margin-right: 1px;
         padding-left: 10px;
         padding-right: 5px;
       }
 
       #pulseaudio {
         border-radius: 0px 10px 10px 0px;
-        margin-left: 1px;
         min-width: 10px;
         padding-right: 10px;
         padding-left: 10px;
@@ -185,7 +191,6 @@
 
       #tray {
         border-radius: 0px 10px 10px 0px;
-        margin-left: 1px;
         min-width: 10px;
         padding-right: 10px;
         padding-left: 10px;
@@ -193,14 +198,21 @@
 
       #custom-media{
         border-radius: 10px 0px 0px 10px;
-        margin-left: 1px;
         padding-left: 10px;
         padding-right: 5px;
       }
 
+      #custom-sep-small {
+        margin-left: 1px;
+        margin-right: 1px;
+      }
+
+      #custom-sep-big{
+        margin-left: 5px;
+      }
+
       #custom-weather {
         border-radius: 0px 10px 10px 0px;
-        margin-left: 1px;
         padding-right: 10px;
         padding-left: 5px;
       }
