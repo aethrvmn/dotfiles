@@ -25,7 +25,6 @@
         
         modules-left = [
           "custom/media"
-          "custom/sep-small"
           # "cava"
           "pulseaudio"
         ];
@@ -37,9 +36,8 @@
 
         modules-right = [
           "network"
-          "custom/sep-big"
+          "bluetooth"
           "battery"
-          "custom/sep-small"
           "tray"
         ];
 
@@ -50,7 +48,15 @@
             critical = 15;
           };
           format = "{icon} {capacity}%";
-          format-charging = "CH {capacity}%";
+          format-charging = " {capacity}%";
+          format-icons = [ "" "" "" "" "" ];
+        };
+
+        "bluetooth" = {
+          format = "On &#xf294;";
+          format-disabled = "Off &#xe1a9;";
+          format-connected = "{controller_alias} &#xe1a8;";
+          on-click = "sh ~/.dotfiles/scripts/toggle_bluetooth";
         };
 
         "cava" = {
@@ -125,12 +131,6 @@
           escape = true;
         };
 
-        "custom/sep-big" = {
-        };
-
-        "custom/sep-small" = {
-        };
-
         "custom/weather" = {
           exec = "sh $HOME/.dotfiles/scripts/wittr.sh";
           return-type = "json";
@@ -158,11 +158,12 @@
       }
 
       #battery,
+      #bluetooth,
       #cava,
       #clock,
       #pulseaudio,
       #tray,
-      #network
+      #network,
       #custom-media,
       #custom-weather {
         background-color: #4A5152;
@@ -172,19 +173,30 @@
 
       #battery {
         border-radius: 10px 0px 0px 10px;
+        margin-right: 1px;
         padding-right: 5px;
         padding-left: 10px;
       }
 
       #clock {
         border-radius: 10px 0px 0px 10px;
+        margin-right:1px;
         padding-left: 10px;
         padding-right: 5px;
+      }
+
+      #bluetooth,
+      #network {
+        border-radius: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
 
       #pulseaudio {
         border-radius: 0px 10px 10px 0px;
         min-width: 10px;
+        margin-left: 1px;
         padding-right: 10px;
         padding-left: 10px;
       }
@@ -200,15 +212,6 @@
         border-radius: 10px 0px 0px 10px;
         padding-left: 10px;
         padding-right: 5px;
-      }
-
-      #custom-sep-small {
-        margin-left: 1px;
-        margin-right: 1px;
-      }
-
-      #custom-sep-big{
-        margin-left: 5px;
       }
 
       #custom-weather {

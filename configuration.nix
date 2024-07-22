@@ -85,7 +85,6 @@
     brightnessctl
     cava
     # devenv
-    # dejavu-fonts
     # dotnetCorePackages.sdk_9_0
     # eza
     gcc
@@ -125,13 +124,15 @@
 
   # Fonts
   fonts.packages = with pkgs; [
+    corefonts
     dejavu_fonts
+    font-awesome
+    liberation_ttf
+    meslo-lgs-nf
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    liberation_ttf
-    font-awesome
-    meslo-lgs-nf
+    vistafonts
   ];
 
   # Env settings
