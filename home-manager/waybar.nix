@@ -53,10 +53,11 @@
         };
 
         "bluetooth" = {
-          format = "On &#xf294;";
-          format-off = "Off &#xe1a9;";
-          format-connected = "{device_alias} &#xe1a8;";
-          on-click = "sh ~/.dotfiles/scripts/toggle_bluetooth";
+          format = "On ";
+          format-off = "Off ";
+          format-connected = "{device_alias} ";
+          on-click = "alacritty -e bluetoothctl";
+          on-click-right = "sh ~/.dotfiles/scripts/toggle_bluetooth";
         };
 
         "cava" = {
@@ -104,13 +105,14 @@
           format-wifi = "{essid} 直";
           format-disconnected = "Off 睊";
           on-click = "alacritty -e nmtui";
+          on-click-right = "~/.dotfiles/scripts/toggle_wifi";
         };
 
         "pulseaudio" = {
         	format = "{volume}% {icon}";
-        	format-bluetooth = "{volume}% {icon}";
-        	format-muted = "";
-        	format-icons = ["" ""];
+        	format-bluetooth = "{volume}% {icon} ";
+        	format-muted = "婢";
+        	format-icons = ["奔" "墳"];
         	scroll-step = 1;
           on-click = "amixer sset Master toggle";
         	on-click-right = "pavucontrol";
