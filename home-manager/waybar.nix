@@ -103,7 +103,8 @@
 
         "network" = {
           format-wifi = "{essid} 直";
-          format-disconnected = "Off 睊";
+          format-disconnected = "Disconnected 睊";
+          format-off = "Off 睊";
           on-click = "alacritty -e nmtui";
           on-click-right = "~/.dotfiles/scripts/toggle_wifi";
         };
