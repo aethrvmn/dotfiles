@@ -54,8 +54,8 @@
 
         "bluetooth" = {
           format = "On &#xf294;";
-          format-disabled = "Off &#xe1a9;";
-          format-connected = "{controller_alias} &#xe1a8;";
+          format-off = "Off &#xe1a9;";
+          format-connected = "{device_alias} &#xe1a8;";
           on-click = "sh ~/.dotfiles/scripts/toggle_bluetooth";
         };
 
