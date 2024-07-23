@@ -105,7 +105,7 @@
           format-wifi = "{essid} 直";
           format-disconnected = "Disconnected 睊";
           format-disabled = "Off 睊";
-          on-click = "nm-connection-editor";
+          on-click = "nmtui";
           on-click-right = "~/.dotfiles/scripts/toggle_wifi";
         };
 

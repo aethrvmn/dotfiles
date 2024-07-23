@@ -97,6 +97,7 @@
     # jitsi
     # localsend
     nim
+    nimble
     # obs-studio
     # pavucontrol
     playerctl
