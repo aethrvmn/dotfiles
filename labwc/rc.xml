@@ -353,7 +353,8 @@ All values are [yes|no] except for:
       <middleEmulation></middleEmulation>
       <disableWhileTyping></disableWhileTyping>
     </device>
-  </libinput><!--
+  </libinput>
+<!--
 # Window Rules
 #   - Criteria can consist of 'identifier' or 'title' or both (in which case
 #     AND logic is used).
@@ -389,13 +390,13 @@ All values are [yes|no] except for:
 <action name="ToggleAlwaysOnBottom"/>
 </windowRule>
 </windowRules>
--->
   <windowRules>
     <windowRule identifier="*">
       <action name="ToggleDecorations"></action>
     </windowRule>
     <windowRule identifier="*" serverDecoration="no">
       <action name="ToggleDecorations"></action>
-    </windowRule><!-- For some reason Steam needs this -->
+    </windowRule> -For some reason Steam needs this-
   </windowRules>
+-->
 </labwc_config>

@@ -104,8 +104,8 @@
         "network" = {
           format-wifi = "{essid} 直";
           format-disconnected = "Disconnected 睊";
-          format-off = "Off 睊";
-          on-click = "alacritty -e nmtui";
+          format-disabled = "Off 睊";
+          on-click = "nm-connection-editor";
           on-click-right = "~/.dotfiles/scripts/toggle_wifi";
         };
 

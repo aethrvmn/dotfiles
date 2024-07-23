@@ -32,13 +32,24 @@
 
       {
         profile.name = "laptop";
-        profile.outputs =[
+        profile.outputs = [
           {
             criteria = "eDP-1";
             mode = "1920x1080";
+            transform = "normal";
           }          
         ];
       }
+      # {
+      #   profile.name = "tablet";
+      #   profile.outputs = [
+      #     {
+      #       criteria = "eDP-1";
+      #       mode = "1920x1080";
+      #       transform = "180";
+      #     }
+      #   ];
+      # }
     ];
   };
 }
